@@ -19,10 +19,36 @@ const doc = `
     <meta charset="utf-8"/>
     <title>Simple Signal Replication Protocol Specification</title>
     <link rel="stylesheet" href="./katex.min.css">
-    <link rel="stylesheet" href="./github-markdown.min.css">
     <style>
-      body {
-        max-width: 80ch;
+      html {
+       overflow-wrap: break-word;
+       max-width: 70ch;
+       padding: calc(1vmin + .5rem);
+       margin-inline: auto;
+       font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+       font-family: system-ui;
+       color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.75;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
       }
     </style>
   </head>

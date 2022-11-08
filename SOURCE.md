@@ -30,7 +30,7 @@ the risk of either party betraying the others.
 All anonymous data sharing protocols currently require two parties to trust
 each other. Indeed, totally anonymous sharing of data that involves crypto
 currencies is nearly impossible without accepting the risk of one party
-betraying the other. 
+betraying the other.
 
 For the scope of this work; we'd like to highlight two paths where data sharing
 can fail in traditional protocols.
@@ -141,7 +141,6 @@ by replacing (`PUT`) the current entity (`BTC-USD`) with an incomplete `csv`
 content. Using `PATCH`, the source then partially modifies the entity through
 additional data.
 
-
 ```http
 PUT /signals/BTC-USD HTTP/1.1
 Host: destination.com
@@ -172,7 +171,7 @@ Content-Type: text/csv
 
 ## References
 
-- 1: https://de.wikipedia.org/w/index.php?title=Signal&oldid=207389957
-- 2: https://en.wikipedia.org/w/index.php?title=Nyquist%E2%80%93Shannon_sampling_theorem&oldid=1002056076
-- 3: https://en.wikipedia.org/w/index.php?title=Aliasing&oldid=996719536
-- 4: https://en.wikipedia.org/w/index.php?title=Sampling_(signal_processing)&oldid=1000373153
+- 1: [Wikipedia.org: Signal](https://de.wikipedia.org/w/index.php?title=Signal&oldid=207389957)
+- 2: [Wikipedia.org: Nyquist Shannon samply theorem](https://en.wikipedia.org/w/index.php?title=Nyquist%E2%80%93Shannon_sampling_theorem&oldid=1002056076)
+- 3: [Wikipedia.org: Aliasing](https://en.wikipedia.org/w/index.php?title=Aliasing&oldid=996719536)
+- 4: [Wikipedia.org: Sampling (signal processing)](<https://en.wikipedia.org/w/index.php?title=Sampling_(signal_processing)&oldid=1000373153>)
