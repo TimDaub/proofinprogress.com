@@ -7,8 +7,9 @@
     "md:render": "node ./scripts/render.mjs",
     "git:add": "git update-index --add ./index.html",
     "watch": "chokidar \"*(SOURCE.md|scripts\\/render.mjs)\" -c \"npm run md:render\"",
-    "serve": "ssl-serve --ssl",
-    "dev": "concurrently \"npm run watch\" \"npm run serve\""
+    "livereload": "live-reload . --port=8888",
+    "serve": "concurrently \"ssl-serve\" \"npm run livereload\"",
+    "dev": "NODE_ENV=test concurrently \"npm run watch\" \"npm run serve\""
   },
   "pre-commit": "md:render, git:add",
   "repository": {
@@ -37,6 +38,7 @@
   },
   "dependencies": {
     "concurrently": "7.5.0",
+    "live-reload": "1.1.1",
     "ssl-serve": "6.5.8"
   }
 }

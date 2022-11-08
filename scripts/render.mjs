@@ -1,5 +1,6 @@
 // @format
 import { readFileSync, writeFileSync } from "fs";
+import { env } from "process";
 
 import MarkdownIt from "markdown-it";
 import mk from "@iktakahiro/markdown-it-katex";
@@ -11,6 +12,10 @@ const file = readFileSync("./SOURCE.md");
 const content = file.toString();
 const rendered = md.render(content);
 
+const liveReloadInclude =
+  env.NODE_ENV !== "test"
+    ? ""
+    : `<script src="http://localhost:8888"></script>`;
 const doc = `
 <!doctype html>
 <html>
@@ -19,15 +24,16 @@ const doc = `
     <meta charset="utf-8"/>
     <title>Simple Signal Replication Protocol Specification</title>
     <link rel="stylesheet" href="./katex.min.css">
+    ${liveReloadInclude}
     <style>
       html {
-       overflow-wrap: break-word;
-       max-width: 70ch;
-       padding: calc(1vmin + .5rem);
-       margin-inline: auto;
-       font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
-       font-family: system-ui;
-       color: #444;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
       }
 
       body :not(:is(h1,h2,h3,h4,h5,h6)) {
