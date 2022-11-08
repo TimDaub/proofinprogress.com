@@ -4,7 +4,7 @@
   "description": "The Simple Signal Replication Protocol is an application-level protocol with the lightness and speed necessary for distributed and collaborative information systems.",
   "main": "./scripts/render.mjs",
   "scripts": {
-    "posts:clean": "rm dist/*",
+    "posts:clean": "rm -rf dist/*",
     "posts:render": "find ./posts -type f -name \"*.md\" | xargs -L1 -I {} npm run md:render {}",
     "posts:update": "npm run posts:clean && npm run posts:render",
     "md:render": "node ./scripts/render.mjs",

@@ -1,7 +1,7 @@
 // @format
-import { readFileSync, writeFileSync } from "fs";
+import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { env, argv } from "process";
-import { basename } from "path";
+import { parse, resolve } from "path";
 
 import MarkdownIt from "markdown-it";
 import mk from "@iktakahiro/markdown-it-katex";
@@ -9,6 +9,8 @@ import mk from "@iktakahiro/markdown-it-katex";
 const md = new MarkdownIt();
 md.use(mk);
 
+const sourceDir = "posts";
+const outputDir = "dist";
 const post = argv[2];
 const file = readFileSync(post);
 const content = file.toString();
@@ -66,5 +68,7 @@ const doc = `
 </html>
 
 `;
-const name = basename(post, ".md");
-writeFileSync(`dist/${name}.html`, doc);
+let { dir, name } = parse(post);
+dir = dir.replace(sourceDir, outputDir);
+mkdirSync(dir, { recursive: true });
+writeFileSync(resolve(dir, `${name}.html`), doc);
