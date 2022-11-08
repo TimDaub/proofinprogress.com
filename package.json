@@ -5,7 +5,8 @@
   "main": "./scripts/render.mjs",
   "scripts": {
     "md:render": "node ./scripts/render.mjs",
-    "git:add": "git update-index --add ./index.html"
+    "git:add": "git update-index --add ./index.html",
+    "dev": "chokidar \"*(SOURCE.md|scripts\\/render.mjs)\" -c \"npm run md:render\""
   },
   "pre-commit": "md:render, git:add",
   "repository": {
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@iktakahiro/markdown-it-katex": "4.0.1",
     "pre-commit": "1.2.2",
-    "markdown-it": "12.0.4"
+    "markdown-it": "12.0.4",
+    "chokidar-cli": "3.0.0"
   }
 }
