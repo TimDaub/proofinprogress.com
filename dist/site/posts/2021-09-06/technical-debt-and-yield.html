@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="description" content="In software engineering, when there&apos;s a lack of budget or time, we do thingsimproperly. I&apos;d argue that for most code I&apos;ve written, there&apos;s a hidden idealof that code failing to come to fruition. Objectively speaking, any code canhardly be ideal. As there&apos;s no universally aesthetic poem or an infinitelyfunny joke (except in the Monty Python universe), so is there nohyper-functional piece of code.">
+    <title>On "Technical Yield" (and Technical Debt)</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    <script src="http://localhost:8888"></script>
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>On &quot;Technical Yield&quot; (and Technical Debt)</h1>
+<p>In software engineering, when there's a lack of budget or time, we do things
+improperly. I'd argue that for most code I've written, there's a hidden ideal
+of that code failing to come to fruition. Objectively speaking, any code can
+hardly be ideal. As there's no universally aesthetic poem or an infinitely
+funny joke (except in the Monty Python universe), so is there no
+hyper-functional piece of code.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FBWr1KtnRcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>Funnily enough, we engineers, hence, say that when code passes from development
+into production that it has become &quot;<em>legacy</em>.&quot; Legacy, herein, is being used as a
+synonym for the financial term of liability.</p>
+<p>Legacy code is problematic as it can slow us down in the present, as it can
+forcefully direct budgets towards maintenance and since its structure mandates
+what is and possibly can be.</p>
+<p>But when, during development, we take deliberate shortcuts to pump code into
+production with more velocity, then this type of behavior may later qualify as
+<em>incurring technical debt</em>.</p>
+<p>Having had no professional background in any financial domain, as a junior
+software engineer, I liked to talk about technical debt as exactly described
+above. I'd think that a bad piece of code that requires maintenance symbolizes
+technical debt. Never did I dive into the epistemic definition of the term:
+<strong>debt</strong>. Why would I - debt had never been a relatable topic of mine.</p>
+<p>But more recently, by taking on more financial work through building
+<a href="https://rugpullindex.com">rugpullindex.com</a>, I've come to realize the
+powerfulness of painting the full picture that is <em>technical debt</em>. On my walk
+here, it came to my mind that for technical debt to incur, the <em>borrower</em> must
+engage in a deliberate process of <em>collateralizing a piece of
+<a href="https://timdaub.github.io/2021/06/18/when-scope-blows-up/">scope</a></em>.</p>
+<p>In practical terms, what this may mean is that, e.g., a software engineer
+neglects unit testing their code. Considering that unit tests increase
+confidence about a software's correction after changes occur, now suddenly the
+SE (or borrower) traded in future confidence for improved short-term progress.
+If suddenly no testing is required, adjusting a small piece of software is
+quicker and cheaper to send into production.</p>
+<p>However, the catch is that now their debt position starts accumulating
+<em>negative interest</em>. In case a month later, the engineer wants to make another
+change to the code, it now means that adjusting it already became more complex.
+Since no tests are available and because their memories about the code's
+functionality have faded, how can the engineer ship the adjusted code into
+production with confidence?</p>
+<p>They can't. And the most damning part is that at this stage, many engineers
+fold, accept their fate and start incurring even more debt.</p>
+<p><img src="/assets/images/debt-spiral-sausage.jpg" alt="When I googled &quot;debt spiral&quot;, this royalty free image of a sausage came up."></p>
+<p>And that's the ingenuity I found when thinking about technical debt. Not only
+is it a synonym for a piece of code that is bad. Rather it's a term to express
+that a few lines may carry huge liabilities for whoever has taken
+responsibility to maintain them. It's really debt, in the financial sense.
+Except that its deleveraging will take place through various proxies.</p>
+<p>But the real reason I sat down to write this blog post wasn't because of
+technical debt. But because, logically, when there's debt - <strong>there also has to
+be technical interest or yield</strong>.</p>
+<p>So in a way, it's funny that many of us are constantly obsessed with continuous
+shipping, when instead, clearly, there's also <strong>yield</strong> to be harvested from
+great engineering. And intuitively, I believe it exists. There's definitely
+that one brilliant and well-oiled machine producing incredible yield for its
+owner.</p>
+<p>My mind wanders from the image of a combustion engine to the invention of
+higher-level programming languages and computers and to all the brilliant
+physical and chemical breakthroughs that allowed us to engineer around many of
+our life's inconveniences. I'm thinking of the thousands of hours that planes
+are in the air without crashing much. The countless lifes that have been safed
+by airbags. Refrigerators, washing machines, light bulbs.</p>
+<p>Initially, many things were likely produced, incurring technical debt. However,
+seeing the immaculacy of some engineered concepts: I can't think but believe
+that when there's technical debt, there's also the option for technical yield.</p>
+<p>And so I hope through this rhetorical discovery, in the future, I'll code more
+things properly to <strong>stack yield and not debt</strong>.</p>
+
+  </body>
+</html>
+

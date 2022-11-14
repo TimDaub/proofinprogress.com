@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="description" content="In recent months, I&apos;ve noticed a dramatic increase in TypeScript packageson GitHub. I usually come across them when checking repositories of thepeople I follow like. Or, when I&apos;m looking for dependencies to solve aproblem in my projects. And the more TypeScript packages I&apos;m encountering,the more often I get reminded of this little annoyance towards the project.">
+    <title>TypeScript is weakening the JavaScript ecosystem</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    <script src="http://localhost:8888"></script>
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>TypeScript is weakening the JavaScript ecosystem</h1>
+<p>In recent months, I've noticed a dramatic increase in TypeScript packages
+on GitHub. I usually come across them when checking repositories of the
+people I follow like. Or, when I'm looking for dependencies to solve a
+problem in my projects. And the more TypeScript packages I'm encountering,
+the more often I get reminded of this little annoyance towards the project.</p>
+<p>My context is that I've not looked into TypeScript yet. That means I have no
+idea how it works. Unfortunately, this is now starting to become kind of a
+problem when searching for dependencies.
+It does, when I either willingly or accidentally include a TypeScript package
+into my projects. Mainly because my package-choosing criteria include:</p>
+<ul>
+<li>picking packages that I potentially can contribute to (e.g., a lesser-known
+package that contains well-written code); or</li>
+<li>picking packages that are well-maintained by a large community but may
+include code that I'd not be able to easily contribute to (e.g., a popular
+package using a C library internally)</li>
+</ul>
+<p>I've put these criteria in place willingly to achieve a certain quality
+standard when building applications. Either because I can fix bugs myself
+quickly, or because I'm able to rely on a strong community to fix them.
+However, with TypeScript packages in npm, there's now this opaque problem of
+not knowing the language or quickly telling a package's language and its
+community size. Also, TypeScript could be just another CoffeeScript.</p>
+<p>So essentially, the problem is that TypeScript authors publish their packages
+on npm, the package manager for Node.js. And to me, that's what is weakening
+the JavaScript ecosystem. Since its inception, and throughout trends like
+Coffeescript, npm has mostly held the promise of only hosting JavaScript
+packages. However, this promise is <code>rejected()</code> (lol) by many authors
+publishing their TypeScript-to-JavaScript transpiled packages.</p>
+<p>Indeed, it makes sense considering that Microsoft markets TypeScript as a
+&quot;superset of JavaScript&quot; and since it &quot;compiles&quot; to JavaScript, why not publish
+packages to npm? But in terms of equality and identity, TypeScript is not
+JavaScript. After all, you'd not consider C and Objective-C the same either, or
+would you? In both examples, the languages are subsets/supersets but were
+conceived with different goals in mind to solve other problems.</p>
+<p>Therefore, TypeScript authors should, in my opinion, do something along the
+following lines:</p>
+<ul>
+<li>namespacing their TypeScript packages; or</li>
+<li>build and publish their packages to their package manager.</li>
+</ul>
+<p>However, continuing to publish TypeScript packages to npm is, in my opinion
+weakening the JavaScript ecosystem as it's splitting its community and
+polluting the npm namespace.</p>
+<h2>Controversy</h2>
+<ul>
+<li>For a short time, there was an <a href="https://news.ycombinator.com/item?id=24344506">intense
+conversation</a> on Hacker News.
+But for unknown reasons, my post got marked as <code>[flagged]</code>. I've written an
+email to the operators.</li>
+</ul>
+
+  </body>
+</html>
+

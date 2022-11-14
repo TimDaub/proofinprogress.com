@@ -4,17 +4,18 @@
   "description": "The Simple Signal Replication Protocol is an application-level protocol with the lightness and speed necessary for distributed and collaborative information systems.",
   "main": "./scripts/render.mjs",
   "scripts": {
-    "posts:clean": "rm -rf dist/*",
-    "posts:render": "find ./posts -type f -name \"*.md\" | xargs -L1 -I {} npm run md:render {}",
+    "posts:clean": "rm -rf dist/site/*",
+    "posts:render": "find site -type f -name \"*.md\" | xargs -P0 -L1 -I {} npm run md:render {}",
     "posts:update": "npm run posts:clean && npm run posts:render",
-    "md:render": "node ./scripts/render.mjs",
-    "git:add": "git update-index --add dist",
-    "watch": "chokidar \"*(posts/*.md|scripts\\/render.mjs)\" -c \"npm run posts:update\"",
+    "md:render": "node scripts/render.mjs",
+    "posts:add": "find dist -name \"*.html\" | xargs -L1 -I {} npm run git:add",
+    "git:add": "git update-index --add",
+    "watch": "chokidar \"*(site/**/*.md|scripts\\/render.mjs)\" -c \"npm run posts:update\"",
     "livereload": "live-reload . --port=8888",
     "serve": "concurrently \"ssl-serve dist\" \"npm run livereload\"",
-    "dev": "npm run posts:update&& NODE_ENV=test concurrently \"npm run watch\" \"npm run serve\""
+    "dev": "npm run posts:update && NODE_ENV=test concurrently \"npm run watch\" \"npm run serve\""
   },
-  "pre-commit": "md:render, git:add",
+  "pre-commit": "posts:render, posts:add",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/TimDaub/ssrp.git"
@@ -36,11 +37,12 @@
   "devDependencies": {
     "@iktakahiro/markdown-it-katex": "4.0.1",
     "chokidar-cli": "3.0.0",
+    "concurrently": "7.5.0",
     "directory-tree": "3.3.2",
+    "html-entities": "2.3.3",
+    "live-reload": "1.1.1",
     "markdown-it": "12.0.4",
     "pre-commit": "1.2.2",
-    "concurrently": "7.5.0",
-    "live-reload": "1.1.1",
     "ssl-serve": "6.5.8"
   }
 }
