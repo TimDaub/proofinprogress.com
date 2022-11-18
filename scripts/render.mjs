@@ -24,7 +24,7 @@ const matcher = new RegExp("(?:<p>)([\\s\\S]+?)(?:<\\/p>)");
 const match = rendered.match(matcher);
 let description = "";
 if (match) {
-  description = match[1].replace(/[\r\n]/gm, "");
+  description = match[1].replace(/[\r\n]/gm, " ");
 }
 
 const liveReloadInclude =
