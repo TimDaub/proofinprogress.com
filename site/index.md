@@ -1,3 +1,11 @@
+# Home
+
+👋 Hi! And welcome! You're on the website of Tim Daubenschütz. I index all my
+writing, talks and projects here. Take a look around :)
+
+- [`About`](about.html)
+- [`Projects`](projects.html)
+
 # Writing
 
 - `2022-11-21`: [Why neume's only tightly-coupled dependency must be an L1 ⧉](https://neume.network/posts/why-neume-s-only-tightly-coupled-dependency-must-be-an-l1/)
@@ -62,4 +70,17 @@
 - `2020-04-15`: [Should True Cow Lovers Buy Butter?](posts/2020-04-15/butter.html)
 - `2020-02-19`: [WASM SYNTH, or, how music taught me the beauty of math](posts/2020-02-19/wasm-synth.html)
 - `2020-01-11`: [JSauerteigbrot selber machen](posts/2020-01-11/sourdough.html)
+- `2019-09-18`: [Planet A — "The Tragedy of the CO₂mmons" recap ⧉](https://www.dist0rtion.com/2019/09/18/planet-a-ccc-ethberlin-recap/)
 - `2019-02-28`: [Reasons to not ship a PoA network](posts/2019-02-28/poa.html)
+
+# Talks
+
+- `2022-11-15`: [PEEPanEIP #89: EIP-5192: Minimal Soulbound NFTs with Tim Daubenschütz ⧉](https://www.youtube.com/watch?v=unFTcUjQE3o)
+- `2022-10-19`: [ERC Lightning Talks (at devcon Bogota) ⧉](https://www.youtube.com/watch?v=LhUgGSzZL4Y)
+- `2022-06-22`: [The history of NFTS (Panel at NFTBerlin) ⧉](https://www.youtube.com/watch?v=b9xdl9Gr_WA)
+- `2020-03-27`: [How I Built A Synthesizer In Web Assembly! (at Webaudio Meetup Berlin) ⧉](https://www.youtube.com/watch?v=QJ0k_Qa5VGI)
+- `2019-03-11`: [What is 0xdeface.me? ⧉](https://www.youtube.com/watch?v=BvHzk1bojdg)
+- `2019-03-04`: [Building your own crypto token (at ReDI School) ⧉](https://www.youtube.com/watch?v=_0Y2OfLQoTA)
+- `2018-01-03`: [What's next for BigchainDB? ⧉](https://www.youtube.com/watch?v=IhlfygdpL1Q)
+- `2017-08-03`: [BigchainDB V1.0 release ⧉](https://www.youtube.com/watch?v=zYa-GGNwxXo)
+- `2017-01-09`: [What is COALA IP? ⧉](https://www.youtube.com/watch?v=hF9RaUAy-6g)

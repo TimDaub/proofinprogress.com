@@ -107,7 +107,7 @@ above-outlined ("backward") math. However, having three proposals gave rise to
 voting configurations where voters could not spend all credits. An example of
 the interface is linked in the tweet below.
 
-{% twitter https://twitter.com/timdaub/status/1504836460029034498 %}
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Over 2 years now, I had time to perfect my web app stack 🤓<br><br>🆕 Now, we&#39;re open-sourcing the code behind <a href="https://t.co/Vejz8u3BYb">https://t.co/Vejz8u3BYb</a> on GitHub: <a href="https://t.co/uYGnc5Q2Ur">https://t.co/uYGnc5Q2Ur</a> <br><br>with <a href="https://twitter.com/bundeskunsthall?ref_src=twsrc%5Etfw">@bundeskunsthall</a>, <a href="https://twitter.com/otherinternet__?ref_src=twsrc%5Etfw">@otherinternet__</a>, <a href="https://twitter.com/ETHBerlin?ref_src=twsrc%5Etfw">@ETHBerlin</a> &amp; <a href="https://twitter.com/LeaFilipo?ref_src=twsrc%5Etfw">@LeaFilipo</a>. <a href="https://t.co/JY0PF6NPws">pic.twitter.com/JY0PF6NPws</a></p>&mdash; dmap://:free.timdaub (@timdaub) <a href="https://twitter.com/timdaub/status/1504836460029034498?ref_src=twsrc%5Etfw">March 18, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 In our case, if a user allocated all credits to one proposal, the math worked
 out in their favor and they'd vote with five. However, if they decided to
