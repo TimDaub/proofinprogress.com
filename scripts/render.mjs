@@ -35,6 +35,7 @@ const doc = `
 <!doctype html>
 <html>
   <head>
+    <script defer data-domain="proofinprogress.com" src="https://plausible.io/js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8"/>
     <meta name="description" content="${encode(description)}">
