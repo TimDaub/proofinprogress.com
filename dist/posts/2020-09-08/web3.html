@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="description" content="A long time ago, I gave a talk in front of a full audience talking aboutBigchainDB, a company I worked for to create a (scalable) decentralizeddatabase. As we just had released our browser-compatible JavaScript driver,enthusiastically, I told the audience: &amp;quot;... and so by using our driver fromwithin the browser, your app won&apos;t need a backend anymore&amp;quot;!">
+    <title>web3 is a stupid idea (🔊)</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>web3 is a stupid idea (🔊)</h1>
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1205435200&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/timdaub" title="timdaub" target="_blank" style="color: #cccccc; text-decoration: none;">timdaub</a> · <a href="https://soundcloud.com/timdaub/web3-is-a-stupid-idea" title="Web3 is a stupid idea" target="_blank" style="color: #cccccc; text-decoration: none;">Web3 is a stupid idea</a></div>
+<hr>
+<p>A long time ago, I gave a talk in front of a full audience talking about
+BigchainDB, a company I worked for to create a (scalable) decentralized
+database. As we just had released our browser-compatible JavaScript driver,
+enthusiastically, I told the audience: &quot;... and so by using our driver from
+within the browser, your app won't need a backend anymore&quot;!</p>
+<p>That must have been around 2017 when I first discovered Metamask, and started
+drinking Ethereum's web3 cool-aid. Arguably, web3 quickly became
+something extraordinary. All of a sudden, users could download a browser
+extension and directly interact with a public network. In a sense, it still
+is extraordinary.</p>
+<p>If you have an extension like Metamask installed in your browser today, you can
+visit sites on the web that allow you to do the craziest things with your
+digital money. An excellent recent example of this are DeFi (short for
+&quot;Decentralized Finance&quot;) websites. They allow a user to engage in trading
+cryptocurrencies, providing liquidity, and peer to peer lending. With the
+click of a button and no mandatory signups, you're able to pool thousands of
+dollars. That is super cool and confirms the viability of the web3 vision.</p>
+<p>But actually, what is the web3 vision? It may be that there never was such a
+thing in the first place. All I know is that someone named a library &quot;web3.js&quot;.
+Developers use it to talk to remote or local Ethereum nodes when working in a
+browser environment (JavaScript).</p>
+<p>On a web3-enabled website, when a user now clicks a button to, e.g., pool ether
+in a smart contract, most calculations are supported by the web3.js library
+that periodically talks to an Ethereum node. Ultimately web3.js allows the user
+to send the transaction to the node to transfer the user's money.</p>
+<p>Often, a key-management program, like Metamask, is running on the user's
+browser. It allows the user to sign transactions with the same key on different
+websites.</p>
+<p>In a nutshell, that's web3. It's supposed to be a play on words regarding &quot;web
+2.0&quot;. Web 2.0 is the upgrade of web standards that gave us modern single-page
+applications and dynamic AJAX loading. And Web3? An advancement towards what
+exactly? Money websites?</p>
+<p>Indeed, if you were capable of cleaning your mind of specific memories,
+specifically, let's say you could do <code>grep -l web3 brain | xargs rm</code>. And then
+someone asked you how you'd envision a blockchain-based and
+smart-contract-enabled web3; you'd likely describe an ecosystem vastly
+different to what it is today. You'd think about peer-2-peer networks, light
+clients, and renewed web standards. That's precisely not web3.</p>
+<p>In today's experience it will instead be mostly shitty react websites that
+crash or stop working when you've neglected to install Metamask (or other
+key-management plugins). Opening a web3 website's network console, you'll see
+that it's making an excessive amount of RPC request to an Ethereum full node.
+Sorry, I meant to say Infura node, a hugely-popular cloud provider hosting
+Ethereum full nodes. That's kinda stupid.</p>
+<p>And since Metamask allows developers to prompt the user for specific contract
+calls, what's even more stupid, is that all your money may be at the risk of
+continually getting stolen with the accidential click of a button. Either by
+someone hacking the website's server. Or by the website provider
+becoming corrupt themselves. Or simply because a website pretends to do X when
+it does Y (stealing all your money).</p>
+<p>But instead of continuing to rant, I'd now like to now point out what I think
+should change about web3:</p>
+<ul>
+<li>We should stop building key-management plugins and start thinking about a
+standardizable web API. We must stop training our users to install shitty
+browser plugins!</li>
+<li>We need to make light clients work as soon as possible and become independent
+from third-party services like thegraph and Infura.</li>
+<li>We need to improve our client libraries (ethers.js and web3.js) by
+dramatically simplifying them and making them bug-free (god damn it!)!</li>
+<li>We need to take advantage of some of the blockchain's fundamental properties.
+Most data is immutable so let's start caching things.</li>
+</ul>
+<p>And finally, I think we should stop focusing all of our attention on bumping
+the web's version number. Maybe we should reconsider writing more backends. We
+should promote more work on permissionless networks like Open Gas Station
+Network that allow developers to upgrade a user's experience. And, we should
+start thinking of a machine network of blockchains more often. In many ways,
+web3 was just a cool demo. But let's come up with something better. Just
+imagine what happens once there's a deeper integration of money into computer
+systems!</p>
+<hr>
+<p>published 2020-09-08 by timdaub</p>
+
+  </body>
+</html>
+

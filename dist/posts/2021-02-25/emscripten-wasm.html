@@ -1,0 +1,216 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="description" content="A year ago, I published a post about &lt;a href=&quot;https://timdaub.github.io/2020/02/19/wasm-synth/&quot;&gt;how I built WASMSYNTH&lt;/a&gt;. As I learned a lotduring the process, the post ended up becoming huge. I even ended up putting awhole section in the post&apos;s appendix.">
+    <title>How To Use Emscripten & WASM in Web Apps</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>How To Use Emscripten &amp; WASM in Web Apps</h1>
+<p>A year ago, I published a post about <a href="https://timdaub.github.io/2020/02/19/wasm-synth/">how I built WASM
+SYNTH</a>. As I learned a lot
+during the process, the post ended up becoming huge. I even ended up putting a
+whole section in the post's appendix.</p>
+<p>Then yesterday, a friend of mine asked me about my opinion on emscripten, the
+tool I had used to build <a href="https://github.com/TimDaub/wasm-synth">WASM SYNTH</a>.
+Coincidentally, I ended up referring him to the WASM SYNTH post's
+<a href="https://timdaub.github.io/2020/02/19/wasm-synth/#appendix">appendix</a>, where I
+had described my build pipeline in detail.</p>
+<p>Today, it made me realize that I could publish that appendix as an individual
+post. And so that what I ended up doing. In the following sections, you'll
+learn about the build process that I'm using in the WASM SYNTH project.</p>
+<p>&quot;How do I integrate WebAssembly into my regular web app build without bloating
+it too much?&quot; I wondered when I first started working with WebAssembly. To put
+things into perspective: I had just recently switched from Webpack to rollup.js
+as I was sick of spending hours setting up Webpack with its ten thousand magic
+configuration options.</p>
+<p>To my surprise, however, neither framework has reasonable defaults for handling
+WebAssembly yet. Notably, when we generated the WebAssembly outputs using
+emscripten and they <a href="https://developers.google.com/web/updates/2018/04/loading-wasm">grew bigger than
+4KB</a>. But
+there were other problems too:</p>
+<ul>
+<li>rollup.js bundles all source file into a single JavaScript file.</li>
+<li>Booting the app, also means booting react.js, which itself starts a continuous
+process that we'll somehow have to take into account.</li>
+<li>emscripten generates a <code>.wasm</code> and a <code>.js</code> file. The <code>.wasm</code> file contains
+all C++ source code as well as WebAssembly instructions. The <code>.js</code> file acts
+as the glue between WebAssembly and JavaScript.
+<ul>
+<li>In some cases, there's this 4KB size limit on loading <code>.wasm</code> files</li>
+<li>The emscripten <code>.js</code> glue code is super useful. I can recommend including
+it into your code deliverable.</li>
+</ul>
+</li>
+<li>The <code>AudioWorklet</code> is supposed to be included into the page by using <code>new AudioContext().addModule(&lt;path&gt;)</code> - It has a separate global scope. But emscripten's glue code relies on the
+global scope too (<code>Module</code> object)</li>
+<li>Rollup.js doesn't have good defaults or plugins for bundling
+emscripten-generated <code>.wasm</code> code.</li>
+</ul>
+<p>In the end, this led me to build a custom pipeline to bundle emscripten builds
+every time my source changed. But before I explain how, let's take a step back
+to understand how emscripten's compilation works.</p>
+<p>On installation, emscripten exports a command-line utility called <code>emcc</code> into
+the shell. To demonstrate its capabilities, let's try compiling the <code>Hello World</code> example from the beginning of the post:</p>
+<pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;emscripten/bind.h&gt;
+
+using namespace emscripten;
+
+std::string hello() {
+  return &quot;hello world&quot;;
+}
+
+// NOTE: Using embind, we can define `hello`'s external name
+EMSCRIPTEN_BINDINGS(my_module) {
+  function(&quot;hello&quot;, &amp;hello);
+}
+</code></pre>
+<p>To make it executable by a browser, we'll use <code>emcc</code> to compile it to a <code>.wasm</code>
+and a <code>.js</code> file.</p>
+<pre><code class="language-bash">$ emcc main.cc --bind -WASM=1 -o main.js
+</code></pre>
+<p><code>emcc</code> here simply compiles all functions contained in <code>main.cc</code> into a
+<code>main.wasm</code> file. Besides, it also generates this glue code (<code>main.js</code>) using
+<a href="https://emscripten.org/docs/porting/connecting_cpp_and_javascript/embind.html">Embind</a>.
+It allows us to invoke functions, initially written in C++, directly from
+within JavaScript as if they were just regular classes. So to make emscripten's
+outputs work correctly, we'll have to include the <code>.js</code> into the page. On the
+initialization of the page, emscripten's clue code is loading the <code>.wasm</code> file
+asynchronously. Through some trick, the browser skips the 4KB file size limit,
+and all our C++ classes are now available as native JS classes:</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;script src=&quot;wasm/main.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+      Module.onRuntimeInitialized = function () {
+        console.log(Module.hello());
+      };
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>So far, so good. But, as I've mentioned previously, one of the problems now is that
+the <code>AudioWorklet</code>, being spawned in a separate thread with a separate global
+scope, won't be aware of emscripten's <code>window.Module</code>. So how do we export code
+from within a Worklet?</p>
+<p>After spending quite some time researching that question, I discovered that the
+Google Chrome Labs team
+<a href="https://github.com/GoogleChromeLabs/web-audio-samples/blob/master/audio-worklet/design-pattern/wasm/index.html">recommends</a>
+transpiling all JavaScript source into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">native
+modules</a>
+and then simply use ES6's <code>import from</code> syntax. Well, it turns out the JS
+modules syntax <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">isn't widely supported
+yet</a>,
+particularly not in <code>Workers</code>, let alone <code>Worklets</code>...</p>
+<p><img src="/assets/images/import-support.png" alt=""></p>
+<p>But luckily, after banging my head another few days against JS modules and
+other fancy new front end frameworks, I found a surprisingly simple trick.</p>
+<p>I reduce emscripten's outputs to a single <code>.js</code> file that contains the <code>.wasm</code>
+as base64 string using it's <code>-s SINGLE_FILE=1</code> option. As we need emscripten's
+<code>.js</code> file to define <code>window.Module</code> in the <code>AudioWorklet</code>'s global scope, I
+then simply append the emscripten JavaScript file with the <code>AudioWorklet</code>'
+JavaScript file to make them configure the same global scope. That allows me to
+execute WebAssembly from within a Worklet without using the poorly supported
+<code>import from</code> syntax. Ultimately, I ended up with the following bash script (or
+on
+<a href="https://github.com/TimDaub/wasm-synth/blob/master/scripts/build.sh">GitHub</a>):</p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+
+DIR=&quot;.wasm&quot;
+
+# NOTE: Generates the .wasm directory if it doesn't exist yet.
+if [ ! -d $DIR ]; then
+  mkdir $DIR
+fi
+
+# NOTE `-std`: To use modern c++11 features like std::tuple and std::vector,
+# we need to enable C++ 11 by passing the parameter to clang through emcc.
+emcc src/cpp/*.cc \
+  -std=c++11 \
+  -O1 \
+  -s WASM=1 \
+  -s ALLOW_MEMORY_GROWTH=1 \
+  -s BINARYEN_ASYNC_COMPILATION=0 \
+  -s SINGLE_FILE=1 \
+  -s MODULARIZE=1 \
+  --bind \
+  -o $DIR/main.js
+
+# NOTE: We concat the emscripten generated js and wasm file with the worklet
+# such that we don't have to import it later as an es6 module. This
+# achieves better cross-browser compatibility.
+cat $DIR/main.js src/js/worklets/synth.js &gt; public/worklets/synth.js
+</code></pre>
+<p>To update the page every time the source changed, I additionally used
+<a href="https://www.npmjs.com/package/npm-watch"><code>npm-watch</code></a> to re-run the routine
+each time file changes occur.</p>
+<p>To find the latest version of this build process, check
+<a href="https://github.com/TimDaub/wasm-synth">github.com/TimDaub/wasm-synth</a>. Stay up
+to date by following my newsletter.</p>
+<hr>
+<p>published 2021-02-25 by timdaub</p>
+
+  </body>
+</html>
+

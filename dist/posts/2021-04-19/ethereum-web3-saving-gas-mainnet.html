@@ -1,0 +1,222 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="description" content="To an Ethereum developer, it shouldn&apos;t come as a surprise that Ethereum&apos;smainnet gas fees are insane. For months or weeks now, ERC-20 transfers anddecentralized exchange (short: &amp;quot;DEX&amp;quot;) swaps have come in at roughly $50 intransaction fees. Suddenly finding myself affected by the situation, too, Itook to the pen to publicly claim that &amp;quot;&lt;a href=&quot;https://timdaub.github.io/2021/02/22/ethereum-isnt-fun-anymore/&quot;&gt;Ethereum isn&apos;t funanymore&lt;/a&gt;.&amp;quot; Andwhile some say that &lt;a href=&quot;https://github.com/flashbots&quot;&gt;flashbots&lt;/a&gt; and the rolluprollout may make matters more bearable, it&apos;s my opinion that it&apos;ll be anotherwhile.">
+    <title>Saving Gas on the Ethereum Mainnet</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>Saving Gas on the Ethereum Mainnet</h1>
+<p>To an Ethereum developer, it shouldn't come as a surprise that Ethereum's
+mainnet gas fees are insane. For months or weeks now, ERC-20 transfers and
+decentralized exchange (short: &quot;DEX&quot;) swaps have come in at roughly $50 in
+transaction fees. Suddenly finding myself affected by the situation, too, I
+took to the pen to publicly claim that &quot;<a href="https://timdaub.github.io/2021/02/22/ethereum-isnt-fun-anymore/">Ethereum isn't fun
+anymore</a>.&quot; And
+while some say that <a href="https://github.com/flashbots">flashbots</a> and the rollup
+rollout may make matters more bearable, it's my opinion that it'll be another
+while.</p>
+<p>But then how's a practical software engineer supposed to solve the solution?
+Indeed, my inner VC would blab something like &quot;<a href="https://www.usv.com/writing/2018/10/the-myth-of-the-infrastructure-phase/">Apps =&gt; Infrastructure =&gt; Apps
+=&gt;
+Infrastructure</a>,&quot;
+but is that genuinely actionable advice for builders?</p>
+<p>I've tried convincing others that Ethereum's infrastructure could be better. My
+take: <a href="https://rugpullindex.com/blog#ScalingEthereumOneTxAtATime">Light clients could help to save
+gas</a>. However, I'm
+neither too influential in the space nor can I have canons full of VC fiat to
+further my ideas. So then what's left?</p>
+<h2>Following Pieter's advice</h2>
+<p>It's always a good idea to trust the legacy knowledge of a dead person, right?
+Well, let's say, at least they won't have much of a chance of turning out to be
+an idiot on Twitter later simply because, you know, they're dead and hence
+can't tweet.</p>
+<p>But putting that tangentant/weird thought aside for a second, here's one of
+Pieter Hintjens' great ideas: &quot;<strong>Don't have a technical vision. Solve
+problems!</strong>&quot; [3]. OK, so gas prices are too damn high. What can we do about
+it?</p>
+<p>Well, hear me out, <strong>how about... we make transactions use less gas!</strong></p>
+<p><img src="/assets/images/unwantedadvice.png" alt=""></p>
+<p>And how do we make transactions use less gas? We do so by reducing the usage of
+expensive <a href="https://ethervm.io/">EVM opcodes</a> in our blockchain scripts. Or by
+sending less transactions. Hence, the rest of this post summarizes my research
+into how to use less gas.</p>
+<h2>A Problem: Wasteful <code>approve</code> Transactions</h2>
+<p>On April 18, 2021, Ethereum processed 1,396,766 transactions, of which 915,104
+(65,5%) were ERC-20 token transfers [1, 2]. Having an ERC-20 contract interact
+with another contract (e.g., a DEX) means that there will be an
+<a href="https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-allowance-address-address-"><code>allowance(address owner, address spender)</code></a>
+transaction first <em>before</em> transferring any value from A to B.</p>
+<p>But why is that? See, conceptually, an ERC-20 token is a script that runs as a
+singleton on Ethereum. It's akin to an ordinary object (as in &quot;Object-oriented
+programming,&quot; short &quot;OOP&quot;) but technically called a &quot;contract&quot; (as in &quot;smart
+contract&quot;). A developer constructs it upon deployment to chain. Other contracts
+like automated market makers are, too, built like singletons.</p>
+<p>Further, this means that a contract can own state and make it selectively
+accessible. It's similar to how classes work in, e.g., JavaScript. There's a
+state variable, and we must access it through getters and setters.</p>
+<pre><code class="language-js">class Store {
+  constructor(a) {
+    this.a = a;
+  }
+  set a(value) {
+    this.a = value;
+  }
+  get a() {
+    return this.a;
+  }
+}
+</code></pre>
+<p>Hence, for an object <code>store,</code> that is an instance of the class <code>Store</code>, we
+wouldn't be able to directly access <code>this.a</code>. Instead, we can only set it using
+its setter method. Hence, we have no control over <code>this.a</code> from the outside.</p>
+<p>EVM languages like Solidity and their token contracts (e.g. ERC-20) use this
+exact logic to transfer tokens between parties. Do you want to send one from A
+to B? Sure, then to move your token, call the contract's setter function
+<a href="https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-Transfer-address-address-uint256-"><code>transfer(address recipient, uint256 amount)</code></a>
+to edit the underlying mapping between addresses the number of tokens they own.</p>
+<p>Now, the problem of having to call the <code>allowance</code> function before making a
+<code>transfer</code> arises when interacting with a token through a third-party contract.</p>
+<p>A typical use case is to swap two tokens on a decentralized exchange. As it has
+to send back the counter pair of your swap (e.g., you trade WETH for USDC),
+it'll have to guarantee to receive your WETH when its sending out USDC in
+return.</p>
+<p>Hence, when a user calls a DEX's swap function, the DEX will contact the user's
+token contract to <a href="https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-transferFrom-address-address-uint256-"><code>transferFrom(address user, address DEX, uint256 amount)</code></a>
+to ingest the user's WETH and then transfer its USDC to the user.</p>
+<p>As all of this happens in a single and atomic transaction, that will fail if
+any of its sub-operations fail, a DEX contract can ensure the safety of
+swapping of two tokens. However, since the swap contract has no authority over
+setting another user's token balance by, e.g., calling <a href="https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-transferFrom-address-address-uint256-"><code>transferFrom(address user, address DEX, uint256 amount)</code></a>,
+an upfront <a href="https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-approve-address-uint256-"><code>approve(address DEX, uint256 amount)</code></a>
+transaction is required.</p>
+<p>That's why you have to do two transactions when you're starting out trading on,
+e.g. Uniswap.</p>
+<h2>Quantifying &quot;wasteful&quot;</h2>
+<p>Still, you may say that an <code>approve</code> transaction may only have to be sent once
+for a given token and a third-party contract. And that's an acceptable
+hypothesis. But let's look into how wasteful that is.</p>
+<p>We can do so using the logs of Ethereum called &quot;events.&quot; To query for them, we
+take an event's function signature and hash it using
+<a href="https://emn178.github.io/online-tools/keccak_256.html">Keccak-256</a>.</p>
+<pre><code>keccak256(&quot;Approval(address,address,uint256)&quot;)
+&gt; 8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925
+keccak256(&quot;Transfer(address,address,uint256)&quot;)
+&gt; ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
+</code></pre>
+<p>Using <a href="https://duneanalytics.com/queries/35211">Dune Analytics' brilliant API</a>,
+we can then query all of last week's logs in Ethereum (from block
+<a href="https://etherscan.io/block/12230342">12230342</a>) to find how many <code>Approval</code>
+and <code>Transfer</code> events there are. Comparing
+<a href="https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-Approval-address-address-uint256-"><code>Approval(address,address,uint256)</code></a>
+and
+<a href="https://docs.openzeppelin.com/contracts/2.x/api/token/erc20#IERC20-Transfer-address-address-uint256-"><code>Transfer(address,address,uint256)</code></a>
+events there were. It's</p>
+<ul>
+<li>41759397 <code>Approval</code> events; and</li>
+<li>445308438 <code>Transfer</code> events.</li>
+</ul>
+<p>Of all Ethereum <code>transfer</code> transactions last week, it means that 9,4% signaled
+an <code>Approval</code> event. Assuming that the goal of every <code>Approval</code> event is a
+future <code>transfer</code> transaction, then 9,4% of <code>transfer</code>s still require an
+upfront on-chain <code>approve</code> transaction today. Put differently: Approving
+transactions before a transfer is a potentially wasteful practice that we can
+optimize to save the Ethereum network roughly 10% of transaction fees.</p>
+<h2>Gas-Saving Improvement Proposals</h2>
+<p>Indeed there are a few canonicalized ways to avoid upfront <code>approve</code>
+transactions. Using <a href="https://eips.ethereum.org/EIPS/eip-2612">ERC-2612</a>, an
+additional <code>permit</code> function allows a user to sign and relay an approval
+message offline. In turn, that allows skipping the need for an on-chain
+<code>approve</code> transaction. A battle-tested implementation is available in <a href="https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol">Uniswap
+V2's ERC20 token
+script</a>.</p>
+<p>Another way of forgoing an additional <code>Approval</code> is by implementing either
+<a href="https://github.com/ethereum/EIPs/issues/677">ERC-677</a> or
+<a href="https://eips.ethereum.org/EIPS/eip-777">ERC-777</a>. Both of these proposals
+detail an extended <code>transfer</code> function that, upon calling, would reach out to
+the receiving third-party contract to update its state too solving the problem
+of having to send two on-chain transactions.</p>
+<h2>A Call for Further Work</h2>
+<p>Shaving of gas from transactions or shrinking transaction processes seems like
+a helpful method for significantly improving a dapp's user experience and for
+unclogging the Ethereum mainnet.</p>
+<p>The above-quoted Ethereum Improvement Proposals look useful to generate gas
+savings today. They should be implemented by contract owners ASAP.</p>
+<p>However, I feel there's a need for further work in this direction. Using
+compression and indexing techniques, I'm sure there are additional economically
+sound gas-saving opportunities.</p>
+<p>In case you are the author of an approach or the finder of one, please make
+sure to forward them to me via email (tim (at) daubenschuetz (dot) de). Please
+consider subscribing to my newsletter too. Thanks!</p>
+<h2>References</h2>
+<ul>
+<li>1: https://etherscan.io/chart/tx</li>
+<li>2: https://etherscan.io/chart/tokenerc-20txns</li>
+<li>3: HINTJENS, P. Social architecture. Peter Hintjens, 2016.</li>
+</ul>
+<hr>
+<p>published 2021-04-19 by timdaub</p>
+
+  </body>
+</html>
+

@@ -1,0 +1,181 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="description" content="&lt;strong&gt;TL;DR:&lt;/strong&gt; I built a financial index that &lt;strong&gt;rates data sets&lt;/strong&gt; by their markets&apos;performance (&lt;strong&gt;liquidity&lt;/strong&gt; and &lt;strong&gt;equality of liquidity shares&lt;/strong&gt;). &lt;strong&gt;Check outthe &lt;a href=&quot;https://rugpullindex.com&quot;&gt;website&lt;/a&gt;&lt;/strong&gt; and the minimalistic&lt;a href=&quot;https://rugpullindex.com/changelog.txt&quot;&gt;blog&lt;/a&gt;, or keep on reading the article.">
+    <title>Meet rugpullindex.com, an index fund for data sets</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>Meet rugpullindex.com, an index fund for data sets</h1>
+<h2>TL;DR</h2>
+<p><strong>TL;DR:</strong> I built a financial index that <strong>rates data sets</strong> by their markets'
+performance (<strong>liquidity</strong> and <strong>equality of liquidity shares</strong>). <strong>Check out
+the <a href="https://rugpullindex.com">website</a></strong> and the minimalistic
+<a href="https://rugpullindex.com/changelog.txt">blog</a>, or keep on reading the article.</p>
+<p><img src="/assets/images/rugpullindex.png" alt="A screenshot of the
+rugpullindex.com website" style="border: 5px solid #2bbc8a; border-radius: 5px;"></p>
+<h2>Why Building a Data Set Index?</h2>
+<p><strong>Would you pay a stranger on the internet</strong> to buy a data set they're offering
+without knowing them or ever having seen the data? Tough decision! But that's
+precisely the type of situation <a href="https://oceanprotocol.com">Ocean Protocol</a>
+users face in its newly-launched decentralized <a href="https://market.oceanprotocol.com">data set
+market</a> [3].</p>
+<p>I'll spare you most of the details of how it all works and say this:
+2020's most transforming technology has been <strong>on-chain markets</strong>. In
+particular, the implementation that <a href="https://uniswap.org/">uniswap.org</a> is using
+called <strong>automated market makers</strong>.</p>
+<p>Simply put, they work by incentivizing users to <em>pool</em> a pair of assets at a
+ratio they deem as the assets' current prices. These users, I herein call them
+<strong>liquidity providers</strong>, e.g., pool 1 ETH and 540 USDC, so that when a buyer of
+either asset comes along, they can immediately trade 1 ETH for 540 USDC or 540
+USDC for 1 ETH. This principle works fantastically at scale, as the pool
+incentivizes liquidity-providing by charging buyers and sellers a small fee,
+which is distributed by the pool to each liquidity provider, respectively [1].</p>
+<p><img src="/assets/images/marketmakers.png" style="background-color: white;
+border: 5px solid black; border-radius: 5px;"></p>
+<p>This model has been so successful that there've been days where
+decentralized trading on Uniswap outperformed volumes on Coinbase! Which, of
+course, has lots of implications on the cryptocurrency space. I think it's no
+overstatement to say that automated market makers may be <strong>the killer app for
+crypto</strong>.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🤯 Wow, <a href="https://twitter.com/UniswapProtocol?ref_src=twsrc%5Etfw">@UniswapProtocol</a> 24hr trading volume is higher than <a href="https://twitter.com/coinbase?ref_src=twsrc%5Etfw">@coinbase</a> for the first time ever<br><br>🦄 Uniswap: $426M<br>🏦 Coinbase: $348M<br><br>Hard to express with how crazy this is. <a href="https://t.co/48o0xRkiUo">pic.twitter.com/48o0xRkiUo</a></p>&mdash; hayden.eth 🦄 (@haydenzadams) <a href="https://twitter.com/haydenzadams/status/1300034164830408704?ref_src=twsrc%5Etfw">August 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>But there's one implication I've been particularly keen on exploring: all <strong>the
+openly-accessible data produced by on-chain markets</strong>. See, if you ever tried
+building a trading bot, you'll have noticed the terrible resolution
+publicly-available market data has. You might have also noticed that it's quite
+difficult even to find data at all. It's not by accident. <strong>Trading data is
+valuable</strong>.</p>
+<h2>Rating a Data Set by its Market's Performance</h2>
+<p>Remember when I asked you at the beginning of this article about <strong>buying a data
+set from a random stranger on the internet?</strong> Well, it turns out that Ocean
+Protocol is now betting on the same technology that made Uniswap
+successful. They allow users to publish a data set, along with a fungible
+<strong>data token</strong> and an integrated <strong>automated market maker</strong>. Meaning, you can
+now buy access to a data set by purchasing tokens. These tokens get priced by
+liquidity providers providing a ratio of OCEAN Tokens to <em>data tokens</em>.</p>
+<p>However, just because data sets are now available for sale on the market, doesn't
+mean you know they're valuable! After all, if ebay.com didn't have a rating
+system for sellers, how would you know which seller to trust?</p>
+<p>On ebay.com, you know which seller to trust because you can see how many
+articles they've sold and what each buyer's experience was. It's a simple
+identity-based rating system.</p>
+<p>But within the anarchistic world of cryptocurrencies, there are no working
+identity-based rating systems! Instead, the space is filled with <a href="https://en.wikipedia.org/wiki/Sock_puppet_account">sock
+puppets</a> and
+<a href="https://en.wikipedia.org/wiki/Sybil_attack">sybils</a>. <strong>Then, without buying a
+data set first, how are we supposed to know if a data set is valuable or an
+outright scam?</strong></p>
+<h2>Introducing rugpullindex.com</h2>
+<p>That's where <a href="https://rugpullindex.com">rugpullindex.com</a> comes into play. <strong>We
+crawl all of Ocean Protocol's data token pools daily</strong> and rate each market's
+liquidity provider distribution by its equality using the <a href="https://en.wikipedia.org/wiki/Gini_coefficient">Gini
+coefficient</a>. While ranking
+markets based on their liquidity is common industry-practice, calculating a
+Gini score for each market's liquidity provider shares isn't. The idea behind
+this is that the more liquidity providers with an equal share back an asset in
+the market, the less likely it is for a &quot;rug pull&quot; attack to happen (details
+<a href="https://github.com/oceanprotocol/multi-repo-issue/issues/30#issuecomment-726132174">here</a>).
+By factoring in a pool's relative liquidity, it allows us to derive a score <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">s</span></span></span></span>
+that is <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>s</mi><mo>&lt;</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">0 &lt; s &lt; 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68354em;vertical-align:-0.0391em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span></span>.</p>
+<p>For users of <a href="https://rugpullindex.com">rugpullindex.com</a>, this <strong>yields a
+few attractive benefits</strong>:</p>
+<ol>
+<li>They can now choose to adjust their data set investments based on market
+data.</li>
+<li>They can decide to invest in data sets relative to their performance on
+to <em>increase their diversivication and hence lower their exposure risk</em>.
+And finally;</li>
+<li>If they're unsure about <strong>sending a random stranger on the internet money
+for a data set</strong>, they can check out the data set's market performance to
+make an informed decision.</li>
+</ol>
+<p>It's a widely-known fact that index-based investment yields superior results
+compared to stock picking [2]. The same is true when <em>investing</em> in data, which
+makes me excited about working on this project.</p>
+<h2>What Does The Future Hold?</h2>
+<p>I have many ideas for <a href="https://rugpullindex.com">rugpullindex.com</a> and not as
+much time as I'd like to have. However, my overarching goal is to make the
+ranking so reliable that I can build a smart contract-based index fund on top
+of it.</p>
+<p>I think that rating assets based on their markets' performance is valuable
+occupation in itself. Not only within the data set market but beyond. I'm
+particularly interested in rating a wide range of on-chain asset markets, but
+I'm also thinking about rating more on-chain intellectual property markets. I'm
+eager to crawl more data and explore. Until then, I hope you're having fun
+using <a href="https://rugpullindex.com">rugpullindex.com</a>.</p>
+<p><em><strong>If you have questions, feedback, or business inquiries, please contact me:
+tim@daubenschuetz.de</strong>. If you want to follow along by building journey,
+<strong>please subscribe to my newsletter at the end of the page!</strong></em></p>
+<h2>References</h2>
+<ul>
+<li>1: <a href="https://ethresear.ch/t/improving-front-running-resistance-of-x-y-k-market-makers/1281">Ethresearch: Improving front running resistance of x*y=k market
+makers</a></li>
+<li>2: KAHNEMAN, Daniel. Thinking, fast and slow. Macmillan, 2011.</li>
+<li>3: <a href="https://blog.oceanprotocol.com/oceans-on-ethereum-mainnet-ba9be1aee0ce">Ocean’s on Ethereum Mainnet</a></li>
+</ul>
+<hr>
+<p>published 2020-12-11 by timdaub</p>
+
+  </body>
+</html>
+

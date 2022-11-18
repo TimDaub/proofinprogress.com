@@ -84,3 +84,7 @@ writing, talks and projects here. Take a look around :)
 - `2018-01-03`: [What's next for BigchainDB? ⧉](https://www.youtube.com/watch?v=IhlfygdpL1Q)
 - `2017-08-03`: [BigchainDB V1.0 release ⧉](https://www.youtube.com/watch?v=zYa-GGNwxXo)
 - `2017-01-09`: [What is COALA IP? ⧉](https://www.youtube.com/watch?v=hF9RaUAy-6g)
+
+--
+
+This site is hosted with nginx in a zero-carbon data center.

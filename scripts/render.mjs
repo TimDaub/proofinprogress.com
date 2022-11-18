@@ -13,7 +13,7 @@ const md = new MarkdownIt({
 md.use(mk);
 
 const sourceDir = "site";
-const outputDir = "dist/site";
+const outputDir = "dist";
 const postPath = argv[2];
 const file = readFileSync(postPath);
 const content = file.toString();

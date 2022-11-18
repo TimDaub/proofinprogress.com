@@ -1,0 +1,326 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta name="description" content="In their seminal book, &amp;quot;Radical Markets,&amp;quot; Eric Posner and Glen Weyl introducequadratic voting to improve (or radicalize) democratic preference voting. Theyargue that by allowing voters to express preference intensity and introducing asocial cost for voters, the vote more accurately reflects the populous opinionon a set of choices.">
+    <title>The User Experience Problems Of Quadratic Voting</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>The User Experience Problems Of Quadratic Voting</h1>
+<p>In their seminal book, &quot;Radical Markets,&quot; Eric Posner and Glen Weyl introduce
+quadratic voting to improve (or radicalize) democratic preference voting. They
+argue that by allowing voters to express preference intensity and introducing a
+social cost for voters, the vote more accurately reflects the populous opinion
+on a set of choices.</p>
+<p>On March 16, 2022, with Hito Steyerl, <a href="https://decentralala.com">DoD</a> and
+<a href="http://studiobonn.io">Studiobonn</a>, inspired by Weyl et al.'s idea, we
+conducted a quadratic vote on the future governance mechanisms of
+Bundeskunsthalle, a federally-backed art exhibition hall. To allow audience
+participation, we handcrafted <a href="https://strikedao.com">strikedao.com</a> (<a href="https://github.com/strikedao/strikedao.com">source
+code</a>), a minimum viable quadratic
+voting app. Livestream recording on <a href="https://www.youtube.com/watch?v=x3eLgH-Vm74">YouTube</a>.</p>
+<p>Having been the main developer behind the application, and since I'm currently
+studying Weyl et al.'s book, with this post, I'll name several conceptional
+user experience problems we ran into during implementation.</p>
+<p>Before I dive in, however, if you want to educate yourself on quadratic voting,
+I recommend looking at RadicalExchange's concept page on <a href="https://www.radicalxchange.org/concepts/quadratic-voting/">quadratic
+voting</a> as I won't
+really go into explaining how it works.</p>
+<h2>Problem #1: A Social Cost For Voting Isn't Intuitive.</h2>
+<p>In their 2018 book, Weyl et al. introduce the benefits of having a social cost
+by telling the story of a town and its nearby power plant emitting pollutants
+into the air. Their argument: Depending on the individual's intensity of
+preference, a cost should incur for how much they each demand the plant's
+pollution to decrease assuming everyone's electricity bills dropping.</p>
+<p>For example, in a town with many pollution-tolerant citizens that prefer cheap
+energy, Nils, who is running a laundry and is strongly anti-air pollution,
+shall bear the (quadratic) cost of change in relation to his peers. Said
+differently, he should pay the nominal economic cost of his peers' higher
+electricity bill that would result from lowering the town's pollution.</p>
+<p><img src="/assets/images/cost-of-externality.png" alt="A really sloppy drawing of the externality geometry of Nils. For a better one, buy Weyl's book."></p>
+<p>While, actually, this example motivates the point for introducing a social cost
+to preference voting well, I'd say it's much harder to grok in real-life voting
+scenarios.</p>
+<p>Not only isn't it always possible to directly identify a concrete economic cost
+for each proposal in a voting process, but also, if we'd vote only on choices
+with perfect information, we may not have to vote in the first place. Things
+would just take care of themselves.</p>
+<p>My point being that preference voting on choices isn't always easily reducable
+to a nominal economic problem. Particularly not these days.</p>
+<h2>Learning to differentiate between &quot;voting credits&quot; and &quot;votes&quot; is hard.</h2>
+<p>However, here's where I see the first actual user experience problem with
+quadratic voting: Introducing &quot;voting credits&quot; and mapping them onto votes
+through a mathematical function is where we abandon many.</p>
+<p>In my personal experience, asking people to &quot;forget&quot; all about voting and then
+introducing &quot;voting credits&quot; that only become votes after running them through
+a quadratic cost function <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">c(x) = {x}^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> is a huge challenge. Honestly, and
+without wanting to sound rude, most people probably have long forgotten what a
+quadratic function looks like or that it's just a more elegant way of saying:
+We're going to square some numbers. Those school days have been a while back...</p>
+<p>But additionally, I want to stress the difficulty of motivating the
+introduction of &quot;voting credits&quot; - which even I am having trouble understanding
+at times. The problem is only exemplified by the backwardness of math itself.</p>
+<h2>The Math Of Quadratic Voting is Literally Backward</h2>
+<p>As humans of the twenty-first century, we're well-versed in allocating budgets
+and spending &quot;credits&quot; everywhere. E.g., if we have 5€ in our wallets, we are
+easily capable of spending them on one espresso, one cappuccino, and one piece
+of cake - if all those end up costing roughly five euros.</p>
+<p>But with quadratic voting, and since we're used to having natural numbers as
+voting outcomes, the cost function is reversed. We don't define quadratic
+voting as:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msqrt><mtext>number of voting credits</mtext></msqrt><mo>=</mo><mtext>number of votes</mtext></mrow><annotation encoding="application/x-tex">\sqrt{\text{number of voting credits}} = \text{number of votes}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.24em;vertical-align:-0.25612499999999994em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.983875em;"><span class="svg-align" style="top:-3.2em;"><span class="pstrut" style="height:3.2em;"></span><span class="mord" style="padding-left:1em;"><span class="mord text"><span class="mord">number of voting credits</span></span></span></span><span style="top:-2.9438750000000002em;"><span class="pstrut" style="height:3.2em;"></span><span class="hide-tail" style="min-width:1.02em;height:1.28em;"><svg width='400em' height='1.28em' viewBox='0 0 400000 1296' preserveAspectRatio='xMinYMin slice'><path d='M263,681c0.7,0,18,39.7,52,119
+c34,79.3,68.167,158.7,102.5,238c34.3,79.3,51.8,119.3,52.5,120
+c340,-704.7,510.7,-1060.3,512,-1067
+l0 -0
+c4.7,-7.3,11,-11,19,-11
+H40000v40H1012.3
+s-271.3,567,-271.3,567c-38.7,80.7,-84,175,-136,283c-52,108,-89.167,185.3,-111.5,232
+c-22.3,46.7,-33.8,70.3,-34.5,71c-4.7,4.7,-12.3,7,-23,7s-12,-1,-12,-1
+s-109,-253,-109,-253c-72.7,-168,-109.3,-252,-110,-252c-10.7,8,-22,16.7,-34,26
+c-22,17.3,-33.3,26,-34,26s-26,-26,-26,-26s76,-59,76,-59s76,-60,76,-60z
+M1001 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.25612499999999994em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord text"><span class="mord">number of votes</span></span></span></span></span></span></p>
+<p>but instead:</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mtext>number of voting credits</mtext><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mtext>number of votes</mtext><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\text{number of voting credits} = {(\text{number of votes})}^2.
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord text"><span class="mord">number of voting credits</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.204008em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord"><span class="mopen">(</span><span class="mord text"><span class="mord">number of votes</span></span><span class="mclose">)</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.954008em;"><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">.</span></span></span></span></span></p>
+<p>At least that's both what
+<a href="https://en.wikipedia.org/w/index.php?title=Quadratic_voting&amp;oldid=1068861327">Wikipedia</a>
+and Weyl's book suggest. Where, e.g., five voting credits simply cannot be
+allocated as it'd compute to be <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>5</mn></msqrt><mo>=</mo><mn>2.23...</mn></mrow><annotation encoding="application/x-tex">\sqrt{5} = 2.23...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.13278em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">5</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">2</span><span class="mord">3</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span> votes, a floating-point
+number nobody wants to deal with<sup id="a1"><a href="#f1">1</a></sup>.</p>
+<p>This subtle difference leads to a lot of confusion in the front end. It's, for
+example, why some voters may not be able to allocate <strong>all</strong> their voting
+credits. Below's why...</p>
+<h2>Voters May Not Be Able to Allocate All Their Credits</h2>
+<p>In our <a href="https://www.youtube.com/watch?v=x3eLgH-Vm74">show with Studiobonn</a>, we,
+e.g., had given 25 voting credits to each participant and implemented the
+above-outlined (&quot;backward&quot;) math. However, having three proposals gave rise to
+voting configurations where voters could not spend all credits. An example of
+the interface is linked in the tweet below.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Over 2 years now, I had time to perfect my web app stack 🤓<br><br>🆕 Now, we&#39;re open-sourcing the code behind <a href="https://t.co/Vejz8u3BYb">https://t.co/Vejz8u3BYb</a> on GitHub: <a href="https://t.co/uYGnc5Q2Ur">https://t.co/uYGnc5Q2Ur</a> <br><br>with <a href="https://twitter.com/bundeskunsthall?ref_src=twsrc%5Etfw">@bundeskunsthall</a>, <a href="https://twitter.com/otherinternet__?ref_src=twsrc%5Etfw">@otherinternet__</a>, <a href="https://twitter.com/ETHBerlin?ref_src=twsrc%5Etfw">@ETHBerlin</a> &amp; <a href="https://twitter.com/LeaFilipo?ref_src=twsrc%5Etfw">@LeaFilipo</a>. <a href="https://t.co/JY0PF6NPws">pic.twitter.com/JY0PF6NPws</a></p>&mdash; dmap://:free.timdaub (@timdaub) <a href="https://twitter.com/timdaub/status/1504836460029034498?ref_src=twsrc%5Etfw">March 18, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>In our case, if a user allocated all credits to one proposal, the math worked
+out in their favor and they'd vote with five. However, if they decided to
+allocate credits to other proposals partially, then sometimes they ended up
+having leftover credits they couldn't otherwise spend. Consider where, e.g., a
+voter allocates as follows:</p>
+<ul>
+<li><strong>proposal A</strong>: 3 votes (or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>3</mn><mn>2</mn></msup><mo>=</mo><mn>9</mn><mtext> credits</mtext></mrow><annotation encoding="application/x-tex">3^2 = 9 \text{ credits}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">3</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord text"><span class="mord"> credits</span></span></span></span></span>)</li>
+<li><strong>proposal B</strong>: 3 votes (or <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>3</mn><mn>2</mn></msup><mo>=</mo><mn>9</mn><mtext> credits</mtext></mrow><annotation encoding="application/x-tex">3^2 = 9 \text{ credits}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">3</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">9</span><span class="mord text"><span class="mord"> credits</span></span></span></span></span>)</li>
+<li><strong>proposal C</strong>: ...</li>
+</ul>
+<p>Now, inevitably since there are only seven more credits left (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mtext> total</mtext><mo>−</mo><mn>9</mn><mo>−</mo><mn>9</mn><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">25 \text{ total} - 9 - 9 = 7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mord text"><span class="mord"> total</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span></span></span></span>),
+and since there's no natural number that can be squared to
+equate 7 (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mn>7</mn></msqrt><mo>=</mo><mn>2.65...</mn></mrow><annotation encoding="application/x-tex">\sqrt{7} = 2.65...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.13278em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">7</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">.</span><span class="mord">6</span><span class="mord">5</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span></span></span></span>), this voter won't be able to allocate all their
+credits according to their intensity of preference.</p>
+<p>If they decided to give four credits (or two votes) to proposal C, they'd be
+left with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mo>−</mo><mn>9</mn><mo>−</mo><mn>9</mn><mo>−</mo><mn>4</mn><mo>=</mo><mn>3</mn><mtext> credits</mtext></mrow><annotation encoding="application/x-tex">25 - 9 - 9 - 4 = 3 \text{ credits}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord text"><span class="mord"> credits</span></span></span></span></span>. Similarly, if they wanted to
+spend nine credits (or three votes), they'd run out of credits beforehand as <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25</mn><mo>−</mo><mn>9</mn><mo>−</mo><mn>9</mn><mo>−</mo><mn>9</mn><mo>=</mo><mo>−</mo><mn>2</mn><mtext> credits</mtext></mrow><annotation encoding="application/x-tex">25 - 9 - 9 - 9 =
+-2 \text{ credits}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">2</span><span class="mord">5</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">9</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">2</span><span class="mord text"><span class="mord"> credits</span></span></span></span></span>.</p>
+<p>When working with users of StrikeDAO, I often noticed their confusion around
+this problem. And while it makes sense thinking through it, it's a real
+head-scratcher for user experience designers.</p>
+<p>Moving on, ...</p>
+<h2>Quadratic Voting Results Are Hard To Interpret</h2>
+<p>However, I think the probably <strong>best feature</strong> of boring democratic elections
+is the replicability of a one-person one-vote election. If e.g., in Germany,
+all citizens go voting, we can roughly expect that the sum of all votes is 80
+million people - or whatever the latest census number from Wikipedia says.</p>
+<p>It's this thing our math teachers tried to hammer into our brains before every
+exam: Sanity-check your results. If the outcome is beyond stupid, trace back
+the calculation path to find the error.</p>
+<p>With regular voting, sanity checks are easy as most people are capable of
+adding all proposal results. I mean, unless you vote for Trump - then all bets
+are off.</p>
+<p>Still, with quadratic voting, this way of sanity-checking an election's result
+has suddenly become a non-trivial math challenge.</p>
+<p>First of all, since the election's result is the sum of each voter's credit
+allocation ran through the square root, and since in additions with square
+roots, the commutative rule is invalid <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow></msqrt><mo mathvariant="normal">≠</mo><msqrt><mi>a</mi></msqrt><mo>+</mo><msqrt><mi>b</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{a + b} \neq \sqrt{a} +
+\sqrt{b}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.084995em;vertical-align:-0.19444em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.890555em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">a</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal">b</span></span></span><span style="top:-2.850555em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14944500000000005em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel"><span class="mord vbox"><span class="thinbox"><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span></span><span class="mrel">=</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">a</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.10777999999999999em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.93222em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal">b</span></span></span><span style="top:-2.89222em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.10777999999999999em;"><span></span></span></span></span></span></span></span></span>, I can't find an easy way to interpret quadratic voting results.</p>
+<p><img src="/assets/images/strikedao-voting-results.png" alt="A screenshot of StrikeDAO's voting results"></p>
+<p>Albeit arguably our design and implementation failure in this regard, what
+would you conclude from the above screenshot? We can see that &quot;There's No Such
+Thing As Disintermediation&quot; came in first and &quot;Beyond Public Accountability&quot;
+second. And more?</p>
+<p>In fact, at this point, I'd even consider it a luxury to understand, e.g., &quot;how
+different people voted&quot;: When I see that screenshot, my main question is: Did
+the vote work out well? Are the results plausible or did someone hack it?</p>
+<p>Actually, <a href="https://github.com/Anish-Agnihotri/quadratic-voting">Anish Agnihotri's quadratic voting
+app</a> does a better job on
+this by showing not only the votes but also the percentage of voting credits
+allocated per choice. However, for reproducibility, I'd argue showing the absolute
+number of credits would be even better.</p>
+<p><img src="/assets/images/anish-quadratic-vote-results.png" alt="A screenshot of Optimism's retro active public goods funding results">
+<a href="https://quadraticvote.co/event?id=2c357972-9b0d-4390-b738-32297b653cf1">Link to results page</a></p>
+<h2>Finally, the End Boss: Allocating Voting Credits To Anons On the Internet</h2>
+<p>Though all of the above are challenging problems, each probably needing weeks
+or months more research, the real end boss to quadratic voting is properly
+allocating voting credits. Or actually; the ability to know when one should
+call their voting app &quot;quadratic.&quot;</p>
+<p>These days, with edgy mechanisms being rare given the bull market's incentive
+structure to bubble up innovative ideas, everyone and their dog supposedly
+implements &quot;quadratic voting.&quot;</p>
+<p>As a popular choice e.g., snapshot.org prominently shipped a mechanism adopted
+by many for tallying votes quadratically. However, in these announcements, it
+is often neglected to properly state that quadratic voting is based on the
+assumptions of mitigating any form of Sybil attacks.</p>
+<p>Whereas in a parliament, with a fixed set of representatives having access to a
+potential quadratic voting app, it poses practically no safety risk: Opening
+voting to everybody on the internet (as many blockchain governance mechanisms
+do) has the drawback of introducing a cat and mouse game dynamic.</p>
+<p>Since allocating a few credits towards an issue costs less and the margin cost
+for influence increases, separating voting tokens into many wallets can help to
+influence one's voting power positively.</p>
+<p><img src="/assets/images/snapshot-org-quadratic-vote-issue.png" alt="A GitHub issue criticizing snapshot's naming choice for quadratic voting I filed at snapshot-labs/snapshot a while ago">
+<a href="https://github.com/snapshot-labs/snapshot/issues/951">Link to issue</a></p>
+<p>It seems, however, that either I'm missing something; or that the others don't
+fully understand the math behind quadratic voting.</p>
+<p>With strikedao.com we ended up having the same problem.</p>
+<p>We allocated votes via email, given the flaky assumption that each voter only
+controls one email on the internet. And while I tried arguing to my colleagues
+that another layer of verification (e.g., also signing up with a phone number)
+could make the deciding difference, Hito Steyerl had the conceptually better
+argument, which was that validation complexity increases quadratically - which
+is why we (gladly) ended up not quadrupling our validation budget.</p>
+<p>Gitcoin now has a flurry of services they want you to sign up for before
+participating in their grants round. Ocean Protocol uses BrightID, albeit it's
+entirely unclear how it's supposed to make sure that each human being just ends
+up creating one identity. Snapshot.org acknowledges its shortcomings concerning
+tokens and wallets not being Sybil resistant - but still calls their feature
+&quot;quadratic voting.&quot;</p>
+<p>Sadly, the world isn't ready for quadratic voting. Actually, the world might
+still not even be prepared for regular digital voting.</p>
+<p>Beyond the <em>minor details</em> I've managed to mention, much more authority carry
+Tom Scott's videos on why digital voting is generally a bad idea, which are
+what I want to leave you with. Thanks for reading.</p>
+<p>1: &quot;Why Electronic Voting Is a Bad Idea&quot;</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w3_0x6oaDmI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>2: &quot;Why Electronic Voting Is Still A Bad Idea&quot;</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LkH2r-sNjQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr/>
+<p><em>Footnotes:</em></p>
+<p><small><a name="f1">1</a>: After releasing this blog post, in a <a href="https://www.reddit.com/r/radicalxchange/comments/tprsgi/the_user_experience_problems_of_quadratic_voting/i2e519e/">reddit
+post</a>,
+I was told that spending all credits and dealing with fractional votes is OK.
+<a href="#a1">↑</a></small></p>
+<hr>
+<p>published 2022-03-27 by timdaub</p>
+
+  </body>
+</html>
+
