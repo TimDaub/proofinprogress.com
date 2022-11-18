@@ -1,7 +1,7 @@
 {
-  "name": "ssrp",
+  "name": "proofinprogress.com",
   "version": "0.0.1",
-  "description": "The Simple Signal Replication Protocol is an application-level protocol with the lightness and speed necessary for distributed and collaborative information systems.",
+  "description": "My website",
   "main": "./scripts/render.mjs",
   "scripts": {
     "connect": "ssh root@65.109.1.27",
@@ -18,24 +18,7 @@
     "dev": "npm run posts:update && NODE_ENV=test concurrently \"npm run watch\" \"npm run serve\""
   },
   "pre-commit": "posts:render, posts:add",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/TimDaub/ssrp.git"
-  },
-  "keywords": [
-    "simple",
-    "signal",
-    "processing",
-    "transport",
-    "protocol",
-    "replication",
-    "definition",
-    "data"
-  ],
-  "author": "Tim Daubenschütz <tim@daubenschuetz.de> (https://timdaub.github.io/)",
-  "bugs": {
-    "url": "https://github.com/TimDaub/ssrp/issues"
-  },
+  "author": "Tim Daubenschütz <tim@daubenschuetz.de> (https://proofinprogress.com)",
   "devDependencies": {
     "@iktakahiro/markdown-it-katex": "4.0.1",
     "chokidar-cli": "3.0.0",
