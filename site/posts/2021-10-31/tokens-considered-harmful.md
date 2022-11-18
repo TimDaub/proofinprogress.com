@@ -111,3 +111,7 @@ Do what's good and reasonable - for everyone. And not only for those that hold
 the token.
 
 Because tokens in software design considered harmful.
+
+---
+
+published 2021-10-31 by timdaub

@@ -74,3 +74,7 @@ pedestrian traffic?
 That's all I have for today. I'm planning to do more of these posts during the
 event. If you have suggestions of other topics, I should cover, please reach
 out to me. And if you want to meet in person, please also get in touch!
+
+---
+
+published 2022-02-16 by timdaub

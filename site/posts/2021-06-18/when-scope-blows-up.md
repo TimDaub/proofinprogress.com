@@ -120,3 +120,7 @@ opportunity to resurface and take a breather before going down again.
 So go out there young padawan - blow up some scopes!
 
 ![](/assets/images/mindblown.gif)
+
+---
+
+published 2021-06-18 by timdaub

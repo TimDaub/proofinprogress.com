@@ -46,3 +46,7 @@ entire peninsulas that take two hours to encircle. Those who dominate and
 corrupt nation-states and those that live a lifestyle not even conceivable by
 mere mortals like me. Those that wage wars and finance their godlike island
 utopias on the backs of the people below them.
+
+---
+
+published 2022-08-23 by timdaub

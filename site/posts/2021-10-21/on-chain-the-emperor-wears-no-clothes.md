@@ -89,3 +89,7 @@ So you ask why I claim that "on-chain, the emperor wear no clothes?" I tell
 you, it's because his emperor's tailors were so blinded by the shiny value of
 their ERC20 tokens, they stopped seing "_what is_" and only did what they
 ought.
+
+---
+
+published 2021-10-21 by timdaub

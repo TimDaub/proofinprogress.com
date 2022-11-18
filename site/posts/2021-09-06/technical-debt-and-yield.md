@@ -82,3 +82,7 @@ that when there's technical debt, there's also the option for technical yield.
 
 And so I hope through this rhetorical discovery, in the future, I'll code more
 things properly to **stack yield and not debt**.
+
+---
+
+published 2021-09-06 by timdaub

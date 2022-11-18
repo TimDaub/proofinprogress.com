@@ -53,7 +53,7 @@ frequent pop-cultural events; We don't even take them seriously anymore.
 They've become entertainment as rekt.news existence proves [4]. It's as if we
 can't wait to hear about the latest hacked developers and the background story:
 But cloaked behind these seemingly unspectacular security incidents hides a
-much bigger crisis! It's that web3 has become a DARK and DANGEROUS place!  In
+much bigger crisis! It's that web3 has become a DARK and DANGEROUS place! In
 2020, D. Robinson and G. Konstantopoulos write: "Ethereum is a dark forest."
 [1].
 
@@ -137,3 +137,6 @@ the dark forest.
 8. [https://kleros.io/](https://kleros.io/)
 9. [https://coinmarketcap.com/alexandria/glossary/rug-pull](https://coinmarketcap.com/alexandria/glossary/rug-pull)
 
+---
+
+published 2021-12-08 by timdaub

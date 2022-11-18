@@ -133,9 +133,4 @@ the long term. So I'd be happy to see less hilarity and more humbleness.
 
 ---
 
-## Further reading
-
-- [All posts](/#writing)
-- 2021-02-22: [Ethereum isn't fun anymore](/2021/02/22/ethereum-isnt-fun-anymore/)
-- 2021-12-15: [Are Token Holders Slaying Moloch?](/2021/12/15/token-holders-arent-slaying-moloch/)
-- 2020-09-08: [web3 is a stupid idea (🔊)](/2020/09/08/web3/)
+published 2022-01-31 by timdaub

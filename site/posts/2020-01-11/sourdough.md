@@ -1,13 +1,13 @@
 # Sauerteigbrot selber machen
 
-*(Disclaimer: Dieser Post ist "Work in Progress". Ich arbeite noch am
+_(Disclaimer: Dieser Post ist "Work in Progress". Ich arbeite noch am
 perfekten Sauerteigbrot. Die Angaben auf dieser Seite werden sich also sehr
-wahrscheinlich noch verbessern.)*
+wahrscheinlich noch verbessern.)_
 
 ## Anstellgut herstellen
 
-Um ein Sauerteigbrot zu backen wird zunächst ein *"Anstellgut"* benötigt.  Ein
-Anstellgut ist einfach vergorenes Mehl und Wasser.  Milchsäurebakterien auf der
+Um ein Sauerteigbrot zu backen wird zunächst ein _"Anstellgut"_ benötigt. Ein
+Anstellgut ist einfach vergorenes Mehl und Wasser. Milchsäurebakterien auf der
 Schale einiger Getreide treiben diese Gärung vorran und so entwickelt sich eine
 natürliche Hefekultur. Verschiedene Mehle (Roggen oder Weizen) produzieren
 verschiedene Anstellgüter.
@@ -20,9 +20,9 @@ folgen.
 Einige Anmerkungen zu diesem Rezept:
 
 - Wenn Ihr spontan keinen dauerhaft-warmen Platz in eurer Wohnung finden könnt,
-bspw. im Winter, dann stellt euer Gefäß einfach in euren Backofen und macht
-die Lampe an. Dessen Hitze sorgt für konstante 30°C im Ofen und damit für das ideale
-Klima für eine Sauerteigverhefung.
+  bspw. im Winter, dann stellt euer Gefäß einfach in euren Backofen und macht
+  die Lampe an. Dessen Hitze sorgt für konstante 30°C im Ofen und damit für das ideale
+  Klima für eine Sauerteigverhefung.
 
 - Eine Anfangsmenge von 100g Mehl + 100g Wasser produzieren eine Menge
   Anstellgut. Man kann die Angaben im Rezept also auch gut halbieren.
@@ -35,7 +35,7 @@ Anstellgut permanent bei Zimmertemperatur zu lagern und mind. 1x am Tag,
 optimalerweise aber 2x am Tag mit 1EL Mehl + 4 EL lauwarmem Wasser zu füttern.
 Alternativ kann das Anstellgut aber anscheinend auch im Kühlschrank gelagert
 werden und nur 1x die Woche mit 1EL Mehl + 4 EL lauwarmem Wasser gefüttert
-werden. Wird es allerdings im Kühlschrank gelagert, ist eine *"Reaktivierung"*
+werden. Wird es allerdings im Kühlschrank gelagert, ist eine _"Reaktivierung"_
 nötig. Hierzu wird, das sich im "Winterschlaf" befindliche Anstellgut, über
 einige Tage mit neuer Nahrung (Mehl + Wasser) versorgt um den eigentlichen Brotteig
 dann mit einem sehr aktiven Anstellgut zu backen.
@@ -45,14 +45,14 @@ man Brot backen möchte.
 
 Kleiner Tipp: Da eine tägliche Fütterung natürlich Unmengen an Anstellgut über
 Zeit generiert, würde dass ja auch logischerweise heißen oft Brot backen zu
-müssen (oder Teile des Anstellgut wegzuwerfen).  Man kann aus dem Anstellgut
+müssen (oder Teile des Anstellgut wegzuwerfen). Man kann aus dem Anstellgut
 allerdings auch sehr leckere kleinere Frühstückssnacks braten. Also nicht weg
 werfen! [Idee für einen Snack](https://www.youtube.com/watch?v=vVx2oFFptG0).
 
 ## Sauerteigbrot backen
 
-*(Dieses Rezept ist WIP. Ich experimentiere noch. Außerdem fehlen mir z.T. auch
-noch die richtigen Zutaten.)*
+_(Dieses Rezept ist WIP. Ich experimentiere noch. Außerdem fehlen mir z.T. auch
+noch die richtigen Zutaten.)_
 
 Zutaten:
 
@@ -73,14 +73,14 @@ Kühlschrank packen.
 Es ist wichtig zu beachten, dass ihr am nächsten Tag nun versucht den Teig
 schrittweise glatter zu kneten. Jedoch nicht nur durch Zugabe von Mehl, sondern
 auch durch die richtige Reifung und Knetmechanik! Den Teig also aus dem
-Kühlschrank holen und salzen. Dann  schrittweise ein wenig Weizenmehl hinzu
+Kühlschrank holen und salzen. Dann schrittweise ein wenig Weizenmehl hinzu
 geben, sodass der Teig schleimiger aber fester wird. Ist alles gut verknetet,
 den Teig bei Raumtemperatur für 1-2h gehen lassen.
 
 ![](/assets/images/dough-1.jpg)
 
 Nach der Ruhe, den Teig wieder aus der Schüssel holen und ihn auf eine saubere
-Fläche "werfen und falten".  [Dieses
+Fläche "werfen und falten". [Dieses
 Video](https://www.youtube.com/watch?v=APEavQg8rMw&t=200s) erklärt die Bewegung
 gut. Nachdem ihr das ca 10min gemacht habt, Teig wieder in Schale und weiter
 gehen lassen. Nach und nach sollte sich die Struktur eures Teigs verändert.
@@ -89,15 +89,15 @@ in die Länge ziehen, etc..
 
 Diese Art von Kneten einige Male wiederholen und zwischendurch Teig immer bei
 Raumtemperatur gehen lassen, bis ihr einen Teig habt der schön fluffig und
-glatt ist. 
+glatt ist.
 
 Um eine schöne Kruste beim Backen zu erhalten, müsst ihr nun die
 Oberflächenspannung des Teigs erhöhen. Um dies zu tun, versucht mit euren
 Händen die unteren Seiten des Teiges in dessen untere Mitte zu ziehen. [Dieses
 Video](https://www.youtube.com/watch?v=APEavQg8rMw&t=300s) erklärt es ein
-wenig.  Ihr müsst nicht genau das im Video machen. Aber spielt einfach ein
+wenig. Ihr müsst nicht genau das im Video machen. Aber spielt einfach ein
 wenig mit dem Teig und dann wird euch schon klar werden wie man mehr Spannung
-drauf bringt!  Schlussendlich wollt ihr erreichen, dass auf der zukünftigen
+drauf bringt! Schlussendlich wollt ihr erreichen, dass auf der zukünftigen
 Kruste des Brots Teigspannung entsteht und dass der Teig nicht einfach zu einem
 Fladen zusammensackt. Mit dem wiederholten Kneten und gehen lassen baut ihr
 also Schrittweise die Glutenstruktur des Teigs auf und stabilisiert diese.
@@ -106,14 +106,14 @@ Habt ihr nun also einen schönen Teig, dann besorgt euch einen Brotkorb oder
 eine Schüssel in die euer Teig passt und legt ein Tuch hinein. Mehlt das Tuch
 großzügig und legt den Teig vorsichtig hinein.
 
-Achtung: Man kann den Teig entweder mit seinem "Saum" nach *oben* oder *unten*
-legen.  Beim Backen soll euer Brot ein wenig aufreißen. Das kann entweder mit
+Achtung: Man kann den Teig entweder mit seinem "Saum" nach _oben_ oder _unten_
+legen. Beim Backen soll euer Brot ein wenig aufreißen. Das kann entweder mit
 einem Messerschnitt bewerkstelligt werden, wenn ihr euren Teig mit dem Saum
 nach oben legt, oder indem des Teigs Saum auf natürliche Weise im Ofen aufreist.
 Geschmacksfrage...
 
 Deckt den Teig in der Schüssel mit dem übergebliebenen Tuch ab und lasst ihn
-wieder eine Weile gehen.  Irgendwann sollte der Teig dann eine echt
+wieder eine Weile gehen. Irgendwann sollte der Teig dann eine echt
 "gemütliche" Konsistenz haben wie ein mega weiches Kissen. Beim vorsichtigen
 drücken mit einem Finger, sollte der Teig die Kuhle wieder schließen (siehe
 Video). Ist dass der Fall, könnt ihr schon mal den Ofen anheizen!
@@ -155,3 +155,7 @@ Hier meine ersten Ergebnisse:
 
 Et voila, ihr habt eurer erstes Sauerteigbrot gebacken! Hoffe diese Anleitung
 konnte jemandem weiterhelfen :)
+
+---
+
+published 2020-01-11 by timdaub

@@ -194,3 +194,7 @@ UX challenges users will face. I give alternative solutions to POA.
 
 _(This article was originally posted on
 [medium.com](https://medium.com/@timdaub/why-you-shouldnt-ship-to-a-poa-network-7e2b5aa83aa9))_
+
+---
+
+published 2019-02-28 by timdaub

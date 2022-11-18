@@ -132,3 +132,7 @@ supply and $b$ being, for example, the individual's political influence.
 I know, it sounds like a long shot now. But I truly think we're not that far
 away from ideas like these being put into practical use. In many ways, stable
 coins are a first step. So let's take another one!
+
+---
+
+published 2020-04-18 by timdaub

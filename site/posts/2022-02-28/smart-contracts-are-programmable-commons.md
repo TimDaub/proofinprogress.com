@@ -82,3 +82,7 @@ seek skeuomorphic comparisons for rational regulation: Today, with systems like
 Ethereum, completely new forms of digital (and atomic?) ownership experiences
 are possible that will necessarily challenge the fundamental assumptions of
 price discovery, evaluation, supply and demand economics, and the legal system.
+
+---
+
+published 2022-02-28 by timdaub

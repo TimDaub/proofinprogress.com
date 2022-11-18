@@ -156,3 +156,7 @@ It's great to be here, Denver!
 ## See also:
 
 - [github.com/rugpullindex/libharberger](https://github.com/rugpullindex/libharberger)
+
+---
+
+published 2022-02-19 by timdaub

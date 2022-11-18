@@ -76,3 +76,7 @@ swings and the anxiety of lacking overview. The calm of knowing to have control
 and not to be subjected to the broader public's mania or hysteria. And to never
 split the pie before baking it. That's what I learned from them, and that's
 what I like about them.
+
+---
+
+published 2022-06-25 by timdaub

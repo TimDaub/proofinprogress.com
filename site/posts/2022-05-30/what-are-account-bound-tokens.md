@@ -506,3 +506,7 @@ want.
 
 We must encourage other standards. Let's learn from each other to create a
 decentralized society and find web3's soul.
+
+---
+
+published 2022-05-30 by timdaub

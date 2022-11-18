@@ -113,3 +113,7 @@ communication. Node operators may be biased, but "Ethereum is neutral."
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Reminder: Ethereum is neutral, but I am not.</p>&mdash; vitalik.eth (@VitalikButerin) <a href="https://twitter.com/VitalikButerin/status/1496695587495981056?ref_src=twsrc%5Etfw">February 24, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 That's why Ethereum is the newsfeed we deserve.
+
+---
+
+published 2022-03-11 by timdaub

@@ -100,3 +100,7 @@ everything that we do on our computers already. It's the internet, it's
 programs, it's Minecraft and it's the memes and stories we tell each other.
 
 Sorry Zuck, we don't need you for that.
+
+---
+
+published 2021-11-03 by timdaub

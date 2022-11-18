@@ -120,3 +120,7 @@ uncertainty?
 
 Call me attached to my meaty identity, but I'd rather _detokenize_ than
 _anonymize_.
+
+---
+
+published 2021-10-08 by timdaub

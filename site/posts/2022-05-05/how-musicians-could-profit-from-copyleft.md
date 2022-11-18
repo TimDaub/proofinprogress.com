@@ -158,3 +158,7 @@ an interview of Lex Friedman with John Carmack where they end up mentioning the
 same phenomenon too. [Timestamped-link to
 Spotify](https://open.spotify.com/episode/3LddnZjkpflldHXnRZ0rrw?si=8uvXpi-JQliCCawSCjQONg&utm_source=copy-link&t=7457).
 Thanks for sending it to me!
+
+---
+
+published 2022-05-05 by timdaub

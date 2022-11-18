@@ -93,3 +93,7 @@ efforts are directly profit-linked: And so often, you get people to say those
 empty phrases like: "Mainstream adoption then standardization." So it felt
 necessary to just put this out there for people that feel misunderstood like
 me! Thanks for reading!
+
+---
+
+published 2022-08-28 by timdaub

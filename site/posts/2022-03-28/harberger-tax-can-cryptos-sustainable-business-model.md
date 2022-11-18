@@ -148,3 +148,7 @@ Harberger taxes, and in general, the proposals in Radical Markets are exciting
 new ideas for [the nutritious substrate that are smart
 contracts](2022/02/28/smart-contracts-are-programmable-commons/). I'm excited
 to see more of them in action!
+
+---
+
+published 2022-03-28 by timdaub

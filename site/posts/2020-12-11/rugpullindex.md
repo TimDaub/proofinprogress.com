@@ -128,3 +128,7 @@ tim@daubenschuetz.de**. If you want to follow along by building journey,
   makers](https://ethresear.ch/t/improving-front-running-resistance-of-x-y-k-market-makers/1281)
 - 2: KAHNEMAN, Daniel. Thinking, fast and slow. Macmillan, 2011.
 - 3: [Ocean’s on Ethereum Mainnet](https://blog.oceanprotocol.com/oceans-on-ethereum-mainnet-ba9be1aee0ce)
+
+---
+
+published 2020-12-11 by timdaub

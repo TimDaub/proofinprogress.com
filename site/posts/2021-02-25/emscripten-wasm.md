@@ -160,3 +160,7 @@ each time file changes occur.
 To find the latest version of this build process, check
 [github.com/TimDaub/wasm-synth](https://github.com/TimDaub/wasm-synth). Stay up
 to date by following my newsletter.
+
+---
+
+published 2021-02-25 by timdaub

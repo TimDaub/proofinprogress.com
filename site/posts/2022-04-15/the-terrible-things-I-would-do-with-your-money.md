@@ -91,3 +91,7 @@ _irrelevant information_.
 
 If I had all the creative freedom in the world, I'd do "terrible" things with
 the money you invested.
+
+---
+
+published 2022-04-15 by timdaub

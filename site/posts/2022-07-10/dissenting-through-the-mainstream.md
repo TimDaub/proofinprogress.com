@@ -47,3 +47,7 @@ asynchronicity, and solitude.
 Once observed through all its facets, dissent and subversion form the base of
 all bias. Its utility is rationalization and quantification: Its effect is the
 mainstream's emergence.
+
+---
+
+published 2022-07-10 by timdaub

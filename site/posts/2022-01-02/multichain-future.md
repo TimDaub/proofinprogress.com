@@ -158,3 +158,7 @@ the space's trickiest problems.
 The rule is simple: If a dapp doesn't provide equal or more value to a user
 than the current transaction cost on a strongly decentralized chain, then it's
 probably not worth building.
+
+---
+
+published 2022-01-02 by timdaub

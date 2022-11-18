@@ -153,3 +153,7 @@ signature? No.
 
 And so the rise of new attacks on web3 is inevitable. I for one am looking
 forward to learning from them.
+
+---
+
+published 2021-04-22 by timdaub

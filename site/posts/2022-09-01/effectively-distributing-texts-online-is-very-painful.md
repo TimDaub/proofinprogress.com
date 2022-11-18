@@ -102,3 +102,7 @@ place" better than I found it is why I'm doing this here.
 
 So Hacker News, Twitter, Substack, and all you other "social" networks - go
 fuck yourselves! I can be my own platform 🖕
+
+---
+
+published 2022-09-01 by timdaub

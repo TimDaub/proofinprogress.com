@@ -145,3 +145,7 @@ as I can.
 
 **I want to base decisions on facts, not bets, And that's where I am
 today. Fingers crossed!**
+
+---
+
+published 2021-05-22 by timdaub

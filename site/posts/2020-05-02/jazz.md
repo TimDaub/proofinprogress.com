@@ -109,3 +109,7 @@ better live streams or telephony or central coordinators that we need for music
 to truly succeed in times of SARS-CoV-2. What we need today is asynchronous
 Jazz, or as we computer scientists call it: [git](https://git-scm.com/) (and
 CRDTs), but for musicians! I'd call it an (.arc(hive)) or `.hive` :)
+
+---
+
+published 2020-05-02 by timdaub

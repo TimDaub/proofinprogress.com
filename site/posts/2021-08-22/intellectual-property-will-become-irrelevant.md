@@ -151,3 +151,7 @@ that monkeypatch the legal licensing of digital artifacts.
 
 _**please consider subscribing to my news letter if you enjoyed reading this
 piece**_
+
+---
+
+published 2021-08-22 by timdaub

@@ -205,3 +205,7 @@ time.[↑](#a2)</small>
 Rügenwalder's Cordonbleus today are only vegetarian. This means some animal
 abuse may take place. I'd argue that today you cannot yet consume Rügenwalder
 Cordonbleus entirely without guilt.[↑](#a3)</small>
+
+---
+
+published 2020-04-15 by timdaub

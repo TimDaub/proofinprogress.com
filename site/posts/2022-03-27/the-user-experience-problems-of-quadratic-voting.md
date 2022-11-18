@@ -248,3 +248,7 @@ _Footnotes:_
 post](https://www.reddit.com/r/radicalxchange/comments/tprsgi/the_user_experience_problems_of_quadratic_voting/i2e519e/),
 I was told that spending all credits and dealing with fractional votes is OK.
 [↑](#a1)</small>
+
+---
+
+published 2022-03-27 by timdaub

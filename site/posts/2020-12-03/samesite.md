@@ -72,3 +72,7 @@ MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSi
 - 2: [Answering my own question on StackOverflow about disabling SameSite
   cookies in
   Firefox](https://stackoverflow.com/questions/65130753/disable-samesite-cookie-policy-in-firefox-developer-edition/65130891#65130891)
+
+---
+
+published 2020-12-03 by timdaub

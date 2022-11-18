@@ -155,3 +155,7 @@ principles, the discussions, the participation, the conceptualization,
 communication, the aesthetics, the humans, and outcomes of the process" matter
 more than the "gleam" and the "potency" that comes from "being able to build
 gleaming skyscrapers."
+
+---
+
+published 2022-07-27 by timdaub

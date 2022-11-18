@@ -105,3 +105,7 @@ to express me and my ideas through language, it being code, English, or German
   on this topic further.
 
 To all my companions, I'm grateful to enjoy your company!
+
+---
+
+published 2021-12-10 by timdaub

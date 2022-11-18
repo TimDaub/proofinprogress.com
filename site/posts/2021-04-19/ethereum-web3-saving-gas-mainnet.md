@@ -182,3 +182,7 @@ consider subscribing to my newsletter too. Thanks!
 - 1: https://etherscan.io/chart/tx
 - 2: https://etherscan.io/chart/tokenerc-20txns
 - 3: HINTJENS, P. Social architecture. Peter Hintjens, 2016.
+
+---
+
+published 2021-04-19 by timdaub

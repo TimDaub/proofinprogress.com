@@ -85,3 +85,7 @@ online, I can recommend the following talks:
 If you've enjoyed reading this post, consider checking out yesterday's, too,
 "[My First Day at BUIDLWEEK &
 ETHDENVER.](/2022/02/16/ethdenver-buidl-week-day-one/)"
+
+---
+
+published 2022-02-17 by timdaub

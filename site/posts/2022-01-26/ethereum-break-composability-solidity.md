@@ -187,3 +187,7 @@ sacrificing security to receive better scaling results.
   [https://vitalik.ca/general/2021/05/23/scaling.html](https://vitalik.ca/general/2021/05/23/scaling.html)
 - 2:
   [https://github.com/rugpullindex/indexed-sparse-merkle-tree](https://github.com/rugpullindex/indexed-sparse-merkle-tree)
+
+---
+
+published 2022-01-26 by timdaub

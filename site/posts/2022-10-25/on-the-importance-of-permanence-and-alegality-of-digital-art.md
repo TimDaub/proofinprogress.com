@@ -1,0 +1,117 @@
+# On the importance of permanence and alegality of digital art
+
+It was a moonless night, and the three of us were sitting on a desk facing a
+wall, all eating his leftover egg salad with bread and hot sauce. I mean, we
+were trying to eat that - but really, we were also trying not to get our hands
+too dirty, considering the mission we were on.
+
+In the process, one of them had taught me the basics of `xargs` - or at least
+they were trying. And so, using `curl`, we sequenced through the natural
+numbers API we had once architected - hoping to rescue what remained.
+
+I don't know if it was the beer or the egg salad - but something made us feel
+triumphant, although it would turn out that we had failed.
+
+I mean, our efforts were not totally without effect, and so we were indeed able
+to back up some of the data. But in the grand scheme of things, we failed -
+because we didn't back up the artists' manifestations and because, years later,
+the metadata turned out to be useless.
+
+---
+
+This, my friends, is the story of a failed startup and how some colleagues, now
+friends, tried to back up digital art. It's the story of ascribe and
+"ascribed." And it's not fiction - What you just read is an actual account of a
+night we spent trying to back up data from an S3 bucket. Sadly though, we
+weren't diligent enough, and so when public access was revoked - almost all
+ascribe metadata but more importantly, all digital art files ended up being
+deleted.
+
+But let's backtrack a second: In 2015, I started working as a front-end
+developer for a company called ascribe and what we did was registering digital
+art on the Bitcoin blockchain. Bitcoin because Ethereum had simply not been
+around yet. Digital art? Yes, really like a precursor to the modern-day NFT.
+
+It were the early days, and browser plugins like Metamask didn't exist yet -
+but our idea was not uncensorable media. Instead, it was to decentralize
+digital art's ownership layer and make it ownable like you could own a Bitcoin.
+And we ended up doing an OK job on that as the SPOOL protocol is still
+accessible through the blockchain and so technically, ownership can still be
+tracked and viewed.
+
+But then, in 2016, the early-stage startup ended up getting into funding issues
+as back then, having daily active web3 users wasn't a criteria VCs valued. And
+so this meant that we pivoted the company to build a scalable blockchain
+database called BigchainDB instead - ascribe as a product development focus was
+cast aside but remained online for quite some time post-pivot.
+
+Still, and this is somewhat reasonable, when refocusing its attention,
+BigchainDB Limited eventually decided to shut down ascribe, and unfortunately,
+they took down most of the art too.
+
+So that story at the beginning of this moonless night, that's from a moment
+shortly before ascribe's official shutdown date when, I think, I wasn't even
+working there anymore, but we still felt compelled to save what the artists had
+uploaded.
+
+Today, I felt motivated to share this story publicly as I think it needs more
+recognition from those contributing to the NFT space. When NFTs popped in 2021,
+some of the OG's narration was on restoring ascribe and its pre-historical art.
+I and others were asked: What was ascribe? What were the artworks? How can I
+access them, and are there any archival or restoration projects?
+
+The sad story is: We didn't have answers. In fact, we tried getting together on
+GitHub, and we did some reverse engineering on the open-sourced backend. With
+a restoration project we founded called "ascribed," we thought: Maybe it's
+possible to re-instantiate ascribe as an NFT-native platform by migrating the
+SPOOL protocol stored on Bitcoin over to Ethereum.
+
+But my frank assessment is that it's going to be close to impossible, and
+potentially, that I'm now also OK with that. It's because I'm seeing some
+other good projects embodying the spirits and visions of ascribe - of making
+digital art permanent, to archive it, and to fundamentally alegalize it by
+using crypto-native protocols.
+
+Today, seven years later, ascribe is an integral part of the space's story and
+a stark reminder that, contrary to what our parents kept telling us, namely to
+cautiously use the internet as it never forgets - the internet actually has
+forgotten a lot of important stuff, for example, the ascribe library.
+
+So I want to take this moment and motivate two critical aspects of digital art
+and media platforms that we should strive to implement: It's (1) permanence and
+(2) alegality.
+
+Permanence is the temporarily independent and content-integer accessability of
+content. IPFS implements permanence through content-addressability, hence
+creating integrity through file hashing and by making everyone capable of
+replicating the said file. The Internet Archive makes past websites available
+through the Wayback Machine, creating a permanent web of all versions
+throughout time. Bitcoin and Ethereum keep all ledger data available to all
+network peers so as to enable peers to recompute the entire accounting history
+and preserve the network's integrity.
+
+Alegality is a subtractive measure to decrease reliance and dependency on
+institutional law. Alegality means putting a minor emphasis on legality - not
+in opposition to legality (as this would be "illegal") but rather as to
+conceptually solve legal problems without the law being a relevant aspect of
+the solution. Bitcoin solves the double spending problem by building an
+uncensorable permissionless consensus network that never requires the
+intervention of legal recourse. TheDAO's white hat hackers settled the recourse
+of the then-defunct smart contract. And NFTs solve the problem of attribution
+and monetization of art through on-chain registration financialization and not
+through copyright defense.
+
+Permanence and alegality are some tools of Jaya Klara Brekke's hacker engineer
+towards creating autonomous digital policy. The story of ascribe shows us the
+importance of autonomy, alegality, and permanence - as had we treasured those
+aspects, then more of its art would be available today.
+
+Tools of the hacker engineer are to be applied with care but are vitally
+important to understand, practice, and implement to preserve on-chain music,
+art, and culture.
+
+---
+
+originally published on
+[neume.network](https://neume.network/posts/on-the-importance-of-permanence-and-alegality-of-digital-art/)
+on 2022-10-25 by timdaub

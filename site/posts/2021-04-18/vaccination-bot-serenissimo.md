@@ -108,3 +108,7 @@ the best of success in helping to get more people vaccinated!**
 
 A: You're welcome. If you're in Veneto and need an appointment for a COVID
 shot, check out [t.me/serenissimo_bot](https://t.me/serenissimo_bot).
+
+---
+
+published 2021-04-18 by timdaub

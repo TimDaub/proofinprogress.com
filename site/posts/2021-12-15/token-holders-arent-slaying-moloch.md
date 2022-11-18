@@ -127,3 +127,7 @@ outright stupid](https://www.youtube.com/watch?v=3O9FFrLpinQ). It's hard to
 tell but probably not harming Moloch.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3O9FFrLpinQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+published 2021-12-15 by timdaub

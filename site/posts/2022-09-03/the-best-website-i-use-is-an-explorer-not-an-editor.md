@@ -37,3 +37,7 @@ and observed everywhere by giant global corporations stealing my data to enrich
 themselves and their shareholders.
 
 The best websites I use are explorers and not editors.
+
+---
+
+published 2022-09-03 by timdaub

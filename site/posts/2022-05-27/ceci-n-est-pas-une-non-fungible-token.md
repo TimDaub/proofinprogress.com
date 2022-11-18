@@ -177,3 +177,7 @@ Hito Steyerl's StrikeDAO project:
   Krypto-Kapitalismus](https://www.youtube.com/watch?v=btQRji5fU_8)
 - [STUDIO BONN – Who controls the Bundeskunsthalle? Cast your
   Vote!](https://www.youtube.com/watch?v=x3eLgH-Vm74)
+
+---
+
+published 2022-05-27 by timdaub

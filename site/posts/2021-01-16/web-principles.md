@@ -154,3 +154,7 @@ about what I'm doing. Hence, I was eager to share them.
 
 I'm curious to hear other's thoughts and see if they've taken similar paths.
 Please reach out! Also, don't forget to subscribe to my newsletter!
+
+---
+
+published 2021-01-16 by timdaub

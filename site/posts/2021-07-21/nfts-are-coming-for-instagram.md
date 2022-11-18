@@ -106,3 +106,7 @@ funnily enough, they're coming with full force to disrupt the attention
 monopoly of Facebook, Twitter, and other social media platforms. And though
 that was something I never anticipated or deliberately worked towards in my
 work - I can't wait for that to happen.
+
+---
+
+published 2021-07-21 by timdaub

@@ -616,3 +616,7 @@ difference between "jitter" and "latency". The key difference being that one is
 deterministic and the other one isn't. But since we had this conversation at a
 very "late" point of the evening, I don't dare to recite everything he said
 here. [↑](#a6)</small>
+
+---
+
+published 2020-02-19 by timdaub

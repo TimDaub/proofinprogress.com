@@ -81,3 +81,7 @@ serious cryptographic specialist by their side.
 
 We want what we stayed for initially: Good ol smart contracts. But right now,
 they're too damn expensive to innovate.
+
+---
+
+published 2021-02-22 by timdaub

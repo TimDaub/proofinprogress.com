@@ -117,3 +117,7 @@ any other day. I want to believe that today is as good of a time to start
 something new as any other day.
 
 And that's why I think there's no urgency in building web3. WAGMI.
+
+---
+
+published 2021-11-16 by timdaub

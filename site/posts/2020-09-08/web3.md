@@ -85,3 +85,7 @@ start thinking of a machine network of blockchains more often. In many ways,
 web3 was just a cool demo. But let's come up with something better. Just
 imagine what happens once there's a deeper integration of money into computer
 systems!
+
+---
+
+published 2020-09-08 by timdaub

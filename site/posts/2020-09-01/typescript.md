@@ -55,3 +55,7 @@ polluting the npm namespace.
   conversation](https://news.ycombinator.com/item?id=24344506) on Hacker News.
   But for unknown reasons, my post got marked as `[flagged]`. I've written an
   email to the operators.
+
+---
+
+published 2020-09-01 by timdaub

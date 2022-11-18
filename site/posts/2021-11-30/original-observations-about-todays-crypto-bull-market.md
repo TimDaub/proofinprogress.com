@@ -40,3 +40,7 @@ the observations I made in, e.g., the last late-stage bull market in crypto in 2
   build any type of software. It's great, but it doesn't feel real.
 
 And that's all. I hope you can appreciate this different type of blogging too.
+
+---
+
+published 2021-11-30 by timdaub

@@ -130,3 +130,7 @@ dance floor. The rc3 orga was nice enough to allow us streaming audio on our
 map. [Click
 here](https://rc3.world/rc3/room/93840a8f-88f7-4f11-bb61-68800c4d4962/) to
 visit us directly on the rc3.world map.
+
+---
+
+published 2020-12-27 by timdaub
