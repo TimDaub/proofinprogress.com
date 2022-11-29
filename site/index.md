@@ -8,8 +8,9 @@ writing, talks and projects here. Take a look around :)
 
 # Writing
 
-- `2022-11-21`: [Why neume's only tightly-coupled dependency must be an L1 ⧉](https://neume.network/posts/why-neume-s-only-tightly-coupled-dependency-must-be-an-l1/)
+- `2022-11-21`: [My Investment Thesis For The Post-2021 Bull Market](posts/2022-11-22/my-investment-thesis-for-the-post-2021-bull-market.html)
 - `2022-11-10`: [Why We Should Have Markdown Rendered Websites](posts/2022-11-10/why-we-should-have-markdown-rendered-websites.html)
+- `2022-10-21`: [Why neume's only tightly-coupled dependency must be an L1 ⧉](https://neume.network/posts/why-neume-s-only-tightly-coupled-dependency-must-be-an-l1/)
 - `2022-11-01`: [The history of EIP-5192 - Minimal Soulbound tokens ⧉](https://ethereum-magicians.org/t/final-eip-5192-minimal-soulbound-nfts/9814/20?u=timdaub)
 - `2022-10-25`: [On the importance of permanence and alegality of digital art](posts/2022-10-25/on-the-importance-of-permanence-and-alegality-of-digital-art.html)
 - `2022-10-14`: [A path towards EIP upgrading ⧉](https://ethereum-magicians.org/t/erc-lightning-talk-a-path-towards-eip-upgrading/11321?u=timdaub)
