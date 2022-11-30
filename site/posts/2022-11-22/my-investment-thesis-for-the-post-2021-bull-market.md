@@ -7,28 +7,27 @@ be adjusted. So let's jump right in.
 ## My Previous Thesis: DAOs And The Future Of Work
 
 After quitting my full time employment at BigchainDB (which required physical
-presence), I tried out freelancing and remote work - but eventually met some
-LeapDAO contributors who worked in quite radical ways.
+presence) at the end of 2018, I tried out freelancing and remote work - but
+eventually met some LeapDAO contributors who worked in quite radical ways.
 
 It was 2019, but they had already adopted DAI and were managing the
 organization's treasury through a set up of Gnosis multi signatures and
 Holacracy. It was around that time, being exposed to stable coins, getting
 income through bounties and long Holacracy meetings that I formed my first
-investment thesis for curation a specific portfolio of crypto currencies.
+investment thesis for curating a specific portfolio of crypto currencies.
 
 Having the freedom to work on whatever I wanted within the DAO for however long
 I wanted felt really interesting to me. Particularily, after reading so much on
-the benefits of remote work during my phyiscal-presence office job.
+the benefits of remote work during my earlier office job.
 
-So I know, it's not ideal to re-define an existing hypothesis in hindsight, for
-you as the reader. But I think it'll be an important contrast that will make us
-realize how my thinking changed, we I later lay out my adjusted thesis for the
-future.
+So I know, it's not ideal to re-define an existing hypothesis in hindsight for
+you as the reader. But I think it'll be an important contrast as to make us
+realize how my thinking changed, when I later lay out my adjusted thesis.
 
 So in 2019, the following was roughly my model for crypto:
 
-- LeapDAO had created an open bounty market. Those were standardized GitHub
-  issues with labeled complexity in t-shirt sizes. The bigger the shirt, the
+- LeapDAO had created an open bounty market through standardized GitHub issues
+  with labeled complexity in t-shirt sizes (S, M, L). The bigger the shirt, the
   more dollars upon completion. In the beginning, this worked really well
   within the organization: it fostered international cooperation, it made work
   quite competitive and most importantly drove down the cost for technical work
@@ -40,18 +39,19 @@ So in 2019, the following was roughly my model for crypto:
   efficiently and competitively.
 - LeapDAO's Holacracy, paired with an interesting set up of hierarchically
   organized Gnosis multi signature wallets worked surprisingly well as a mode
-  for governance. Participating in 6 months of governance, while it produced lots
-  of fatique, I concluded that this was a widely applicable framework for running
+  for governance.
+- Participating in 6 months of governance, while it produced lots of fatique, I
+  concluded that this was a widely applicable framework for running
   internet-native organizations effectively.
-- The additional subcircles: Used for self-managed budgeting of an
-  organization' departments allowed DAO members to split off and become
+- The additional subcircles, used for self-managed budgeting of an
+  organization' departments, allowed DAO members to split off and become
   risk-seeking entrepreneurs themselves. It seemed like a great way of scaling
   work and my idea was that future organizations would use such a top-down
-  model for organization, reporting and budget controling.
+  model for reporting and budget controlling.
 - Apart from LeapDAO specific things, at the time, I became euphoric about
   remote work functioning much better than expected and about the freedoms it
   offered (mind you that was pre-COVID). I thought that many of my colleagues
-  would actually favor working in the way I currently worked.
+  would actually favor working in the way I now worked.
 - Another emergent phenomen was DAI. It had just been launched and was
   gathering support. Having a USD stable coin was truly a game changer for
   accounting and storing value. Especially with LeapDAO, not having to risk
@@ -63,39 +63,37 @@ So in 2019, the following was roughly my model for crypto:
   without KYC and so those circumstances made me believe that crypto's rate of
   adoption was accelerating.
 
-And with these concepts in mind, for a long period of time, I then selected my
-portfolio's assets. I think I stopped thoroughly applying it some time in the
-bull market, and so it is urgently necessary to formulate and update my
-thinking on what to pay attention now in the crypto market.
+With these concepts in mind, for a long period of time, I then selected my
+portfolio's assets. I think I stopped thoroughly applying the thesis some time
+in the bull market, and so it is urgently necessary to re-formulate and update
+my thinking on what to pay attention now in the crypto market.
 
 ## My Investment Observations for 2022 and Beyond
 
-### As An Accelerationist, I'm Bored
+### As A non-Thielian Accelerationist, I'm Bored
 
 What I think shocked me the most about the surrounding allegations of SBF and
-FTX is that it sadly confirms a hypothesis that people I don't feel
-particularily aligned to promote on social media: Namely that FTX's collapse
-and seeing the curtain pulled back on crypto's inter-pandemic bull market mania
-is just ugly.
+FTX is that it sadly confirms a hypothesis that many people promoted on social
+media: Namely that crypto's inter-pandemic bull market mania is just ugly.
 
-Already jugding the memes popularized during crypto's ATH, "gems" like WAGMI
-and GM felt too chad-like and failed to embody the space's original spirit.
+Already judging the memes popularized during crypto's ATH, "gems" like WAGMI
+and GM, felt too chad-like and failed to embody the space's original spirit.
 
 Whereas other bull runs have had clear technical innvations behind them: It
 felt like this one was a mixture of the space discovering renevue with DeFi,
-but that the truly mind.bending ideas had now been tucked away in a backlog
-drawers because who still wants to spent time experimenting when dollars can be
-made, right?
+but it also got me thinking that the truly mind-bending ideas have now been
+tucked away in a backlog drawers because who still wants to spent time
+experimenting when dollars can be made, right?
 
 Crypto, when I got interested: It was so fringe and almost conspiracy-theory
 like that it lacked the masses' appeal - in fact, with my non-techy friends it
 always made me buffed (or cursed) in an aura of edginess and so many of them
 never took it or me serious. Even today, Bitcoin is to currency what globules
-is to medicine: Nobody really knew of the actual effects and it is mostly
+is to medicine: Nobody really knows of the actual effects and it is mostly
 discounted as esoteric.
 
 But what had always been appealing to me was its quality to have extremely
-variability in its potential: Boom or bust, nobody could really - tell but to
+variability in its potential: Boom or bust, nobody could really tell - but to
 make an impactful change in the world, back then, I thought this would be it.
 
 So I think that's also how accelerationism works fundamentally: An unforgiving
@@ -118,10 +116,12 @@ Two years of pandemic have taught me that while the desk, computer and the
 network is the most powerful workbench ever created, real acceleration is only
 achieved in additional physical presence and in moments that make themselves
 felt in the gut and through anxiety. And at least for the COVID period, if
-anything, digital just helped coping with aversion anything, digital helped
-with implementing aversion - a phenomenon I want to stay on top of.
+anything, digital just helped coping with aversion, it helped with implementing
+aversion - a phenomenon I want to stay on top of.
 
-### Web2 Is In A Crisis
+### "Drop the 'Air', it's cleaner"
+
+But let's go through this in sequential order: Web2 then three.
 
 Famously, Mark Zuckerberg now goes on interviews telling people about the
 Metaverse comedy club they invented and how it benefits shy people with social
@@ -130,43 +130,50 @@ audience. But that to me sounds like the classic aversion thesis from above
 that I want to fundamentally bet against.
 
 While not a comedian myself, I still know that entering the arena vulnerably is
-a carefully curation skill that takes guts to train. And while performing in
+a carefully curated skill that takes guts to train. And while performing in
 the metaverse may be a reasonable first step - the rewarding feeling of
 self-expression psychologically doesn't arise from a low risk show in the
 metaverse. Gratitude arises from commitment and persistence. To the felt
 gratitude of speaking in front of people: the Internet isn't a replacement,
-it's potentially a safer alternative.
+it's potentially a safer alternative though.
 
-But I think this points towards this more interesting trend of
+But I think this points towards that more interesting trend of
 aversion-software: Building a personal metaverse to forego feeling these
-vulnerable emotions of connectedness.
+vulnerable emotions of connectedness on a phyiscal stage. Leaving the
+permanently present exit opportunity open through performing in Mark
+Zuckerberg's metaverse comedy club. Potentially, with a totally anonymous
+account.
 
 In fact, many web2 solutions are now providing almost-too-good-to-be-true
-offerings that anchor us into fasely ideals - but that never really work as
-intended.
+offerings that anchor us into fasely ideals: Meta wants us to believe that we
+can be real comedians. AirBnB, that we're staying at a friend's place. But they
+sadly never really deliver on their marketing.
 
-Dating apps successfully deceive us into thinking that an entire city's supply
-side market for dating is within reach of our finger tips. Swiping through the
-offer feels powerful: That any boy or girl of our dreams, independent of our
-attractivity or theirs in just one decision away. That they're within reach.
+Dating apps successfully deceive us into thinking that an entire "city's supply
+side" is within reach of our finger tips. Swiping through the offer feels
+powerful: That any boy or girl of our dreams, independent of our attractivity
+or theirs in just one decision away. That they're within reach.
 
 But I think, even gender-independently, in 2022, we all know how little these
-apps deliver on their promises. The deception is not just in over focusing on what
-works well multi-modally (pretty images and videos, high contrast, usage of strong
-language).
+apps deliver on their promises. The deception is not just in over focusing on
+what works well multi-modally (pretty images and videos, high contrast, usage
+of strong language).
 
 When we arrive at an AirBnB or a date. At a LonelyPlanet location, then we
 recognize the skilfulness with which the online offer had been drafted with. We
 find that visual attraction doesn't translate into the actual rooms of the
 AirBnB. We find that we're not connecting with our date or that this
-supposedly "lonely" space is filled with other tourists.
+supposedly "lonely" planet is filled with other tourists.
 
-YCombinator's founder Paul Graham and AirBnB's founders are heard in many
-interviews: AirBnB is like temporarily moving in with friends, the idea being
-that you're on the look out for a holiday domicile or a place to lessen your
-business trip loneliness. They're seen asking themselves: Why would anyone want
-to rent their flat out to strangers? And indeed, the modern AirBnB experience
-still poses this question.
+YCombinator's founder Paul Graham and AirBnB's founders state on many occasions
+that AirBnB is like temporarily moving in with friends. The idea being that
+you're on the look-out for a holiday domicile or a place to lessen your
+business trip's loneliness. In talks, they often mention the following:
+
+> When we invested in AirBnB, we asked ourselves: Why would anyone want to rent
+> their flat out to strangers?
+
+And indeed, the modern AirBnB experience now address this question.
 
 While I have really stayed in a young New Yorker's actual flat in 2015, that
 has been the only one of those anchoring experiences throughout many other
@@ -175,36 +182,38 @@ terms included in its name: Unpersonal, professional and clearly niched-in "Bed
 and Breakfast," a validated vertical in the hospitality industry.
 
 Still, and that's magic, the story of AirBnB anchors us during the selection
-process online and so we're hoping for a throwback to that one moment every
-booking. That dream of checking into a real person's appartment, matching
-someone beautiful on a dating app, finding a lonely place on a croweded planet.
+process online and so we're hoping for a throwback to those few real "AirBnB
+moments" we had. That dream of checking into a real person's appartment,
+connecting with someone beautiful on a dating app, finding a lonely place on a
+crowded planet - that's their marketing's anchor, and we're now incapable of
+unseeing it.
 
-Web2 sucks because of those experiences. We came to build a new web as we
-believe in higher signal services.
+Web2 sucks because of those experiences. We came to build a new web.
 
-### Web3 Sucks
+### Better Signal Services
 
 If you haven't read it yet, in fall 2020, I published an article going into the
 details of why I thought web3 sucked. I claimed that "web3 is a stupid idea,"
 as at the time I became convinced that browser wallet enabled websites sucked.
 
-They were hard to create - it felt unreasonable to sell a user on a wallet
-first. Most didn't exist on mobile yet and I generally always felt that truly
-decentralizing with a browser wasn't exactly a good technological proposition.
+They were hard to create - and it felt unreasonable to sell a user on a wallet
+first. Additionally, most wallet apps didn't exist on mobile yet and I felt
+that truly decentralizing with a browser wasn't exactly a good technological
+proposition.
 
 Browsers, even today with crypto-native companies entering the space are puny
-platforms to create actual tech infrastructure. It seemed and still seems
-fundamentally off to base decentralized apps on browsers as a computing
-platforms.
+platforms to create actual decentralized tech infrastructure. It seemed and
+still seems fundamentally off to base decentralized apps on browsers as a
+computing platform.
 
-The offer very limited network capabilities, innovation is very much
+They offer very limited networking capabilities, innovation is very much
 permissioned through FAANG and anything beyond interactive user interfaces is
 out of scope.
 
-Browsers are among the best substrate for building interfaces - but now
+Browsers are among the best substrate for building interfaces - but not
 decentralized apps.
 
-#### Accounting, Taxes and Privacy
+#### My Accountant is gonna kill me
 
 But there is an additional issue with integrating crypto currencies tightly
 into web2 interaction models: It's that I'll make a user and their accountant
@@ -223,7 +232,7 @@ data protection: It's also highly problematic that users then have to disclose
 dated balance changes with up to 18 decimal precision that'll make correlation
 a piece of cake.
 
-#### Safety and Usability
+#### Cold storage is so hot right now
 
 An additional burden is trading-off safety and usability. Close to all of my
 balances are locked cold storage - as they should be. So more often than not, I
@@ -241,17 +250,17 @@ didn't used to be a problem. But I feel like we've crossed that line now and so
 with the mainstream's awareness: It feels even more wrong to expose private
 financial data to the public.
 
-But especially identity-leveragging web3 apps have now created this trade-off
+But especially identity-leveraging web3 apps have now created this trade-off
 between usability and safety. Whereas the metadata correlation for using a
 decentralized exchange is mostly non-problematic: As soon as someone creates a
 web3 profile in a dapp this technically leaks their metadata and makes their
 accounts correlatable.
 
 So yeah: While web2 data and financial data mix well to create signal: It's in
-the interest of users to expose these signals only to those who appropriate
-objectives.
+the interest of users to expose these signals only to those with the
+appropriate objectives.
 
-#### Fragmentation is a Big Issue
+#### exec defrag.exe
 
 But this deliberate fragmentation on the account level is then essentially
 institutionalized through the multichain paradigm, where not only a careless
@@ -265,7 +274,7 @@ mainnet? Why use an app on Solana or Cosmos, when that means having to
 replicate the entire wallet set up for securing keys, but with a slightly
 different technology.
 
-#### Fragmentation Leads to Transitively Bad User Experiences
+#### God safe the user experiences
 
 But then, an additional problem is that of inheriting semi-functional
 infrastructure. An example is Metamask Mobile on Android. While on iOS, upon
@@ -275,14 +284,15 @@ demoing it to a friend, they concluded that Android must be the after-thought.
 
 But I think this is a problem with far wider consequences but one bad isolated
 experience on my Android phone: It becomes a systemic problem that a small
-startup may not succeed to take-on. If a startup's strategy is to create a
-world-class experience for their users: On web2, most or if not all browsers
-get so sufficiently out of the users' way that a pure usability play like Figma
-can get big-time-aquired by Adobe after 10 years. And if you listen to that
-founder's story: You can observe that they were obsessed with controlling and
-delivering a world class image design tool.
+startup may not succeed to take-on.
 
-And although web3 offers the same promise by removing the quality threshold for
+If its strategy is to create a world-class experience for their users:
+On web2, most or if not all browsers get so sufficiently out of the users' way
+that a pure usability play like Figma can get big-time-aquired by Adobe after
+10 years. And if you listen to that founder's story: You can observe that they
+were obsessed with controlling and delivering a world class image design tool.
+
+Although web3 offers the same promise by removing the quality threshold for
 those that can gate keep experiences - WalletConnect's dialog has now over
 thirteen pages on wallet apps a user can pick from - many with potentially
 questionable but transitively-interacting user experiences.
@@ -295,16 +305,18 @@ immensely.
 Now, to address this problem, I see several possibilities for founders; but
 first, let me get one potential solution out of the way: I don't think every
 web3 company should also focus on building a vertically-integratable wallet.
-It'd distractive, risky and add to the noise. But it'd arguably come with the
-benefit of control.
+It would be distractive, risky and add to the noise. But it would arguably come
+with the benefit of control.
 
 Control, that Google and Apple have today with Chrome and Safari. Control, that
 they have with the App Store and the Play Store. And by making decisions in the
-standard committees etc.
+standard committees.
 
 Another approach I've seen is delegation of keys. But frankly, I'm not sure how
 to address the problem and it's a space where I wanna look for solutions and
 organizations that do the right things.
+
+**proof-reading until here, 2022-12-01**
 
 ### Modern DAOs Are Bullshit
 
@@ -355,6 +367,8 @@ since then stopped. But I honestly find it overwhelming to parse the
 structurelessness and the noise. DAOs have lost me for now - until I see
 someone innovating on the above mentioned problems.
 
+### Stablecoins suck
+
 ### The Future Of Work Is Flexible
 
 Whereas I thought that work would exclusively happen online - I now tend to
@@ -400,6 +414,8 @@ eye out for those that manage to create collective meaning for their community
 members. Those that make the network or the movement a central component.
 
 ### Elon's Twitter is an attempt at staking
+
+### Crypto is a Sandbox for real-world mechanism design
 
 ### Crypto Is Now A Threat To Bigtech and TradFi
 
@@ -475,3 +491,5 @@ taking cuts for each transaction. I've been able to hire talent from all around
 the world, and the overhead of using a site like request.network is minimal.
 the world, and the overhead of using a site like request.network is minimal.
 the world, and the overhead of using a site like request.network is minimal.
+
+#### Better DApp infrastructures
