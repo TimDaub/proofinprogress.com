@@ -77,6 +77,7 @@ writing, talks and projects here. Take a look around :)
 
 # Talks
 
+- `2022-11-29`: [Greenpill Podcast on Quadratic Voting, Harberger Taxes and Soulbound tokens](https://www.youtube.com/watch?v=-wQ8VgcoFsg)
 - `2022-11-15`: [PEEPanEIP #89: EIP-5192: Minimal Soulbound NFTs with Tim Daubenschütz ⧉](https://www.youtube.com/watch?v=unFTcUjQE3o)
 - `2022-10-19`: [ERC Lightning Talks (at devcon Bogota) ⧉](https://www.youtube.com/watch?v=LhUgGSzZL4Y)
 - `2022-06-22`: [The history of NFTS (Panel at NFTBerlin) ⧉](https://www.youtube.com/watch?v=b9xdl9Gr_WA)
