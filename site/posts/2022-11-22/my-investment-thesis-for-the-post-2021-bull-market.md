@@ -316,45 +316,54 @@ Another approach I've seen is delegation of keys. But frankly, I'm not sure how
 to address the problem and it's a space where I wanna look for solutions and
 organizations that do the right things.
 
-**proof-reading until here, 2022-12-01**
-
-### Modern DAOs Are Bullshit
+### DAOs? More like chAOs!
 
 But to switch up topics a little, I think it's also important to focus on
 another big vertical the crypto space has given rise to and that is
 decentralized autonomous organizations (short: DAOs). In the introduction of
 this post, I had initially confessed to have majorily focused on investing in
-projects furthering their progress. I have since then changed my mind.
+projects furthering their progress. I have since changed my mind.
 
-On a high level, the reason I'd like to point out is that DAOs have developed
-in a direction I hadn't anticipated. I actually had not foreseen plutocratic
-coin-voting becoming the defacto standard of decision-making. I think I had,
-instead, thought that more organizations would fundamentally adopt more
-policy-focused governance processes; figure out how to make equitable decisions
-without quorum voting - a lesser focus on token distributions.
+On a high level, the reason I stopped being enthusiastic about them is because
+they developed in a direction I hadn't anticipated. I hadn't foreseen
+plutocratic coin-voting becoming the defacto standard for decentralized
+decision-making. I think I had, instead, thought that more organizations would
+fundamentally adopt more policy-focused governance processes; figuring out how
+to make equitable decisions without quorum voting - and I definitely though
+there would be less of a focus on token distributions.
 
-Token-voting is so obviously problematic today that no conference or DAO
-governance conversation takes place without mentioning it at least once. From
-whale-only enforcement of proposals, to being exposed to excessive,
-greater-fool token holder risk, token-voting and the modern DAO stack doesn't
-seem viable to me.
+Already voting with tokens is now so obviously problematic that today no
+conference of DAO governance conversation takes place without mentioning it at
+least once. From whale-only enforcement of proposals, to being exposed to
+excessive, greater-fool token holder risk, token-voting and the modern DAO
+stack has stopped looking viable to me.
 
-With OceanDAO, I worked an entire year being paid in token. And I gladly always
-sold at the day of receival to safely cover my expenses. Today, my expenses
-have gladly been covered in full - probably around the 1 OCEAN/USD mark. I
-actually made good money working for them - but through this, I also never had
-any meaningful voting power. Ironically, they have since then shifted their
-business to verticals that stopped aligning our collaboration - and so I can
-gladly say that, for now, I didn't get brutally rekt in a market that has now
-priced the asset at 10x less the value of my base price.
+For me, it had always been more about natively implementing future of voting -
+and much less about governance decisions.
 
-Apart from having large degrees of autonomy, in terms of receiving earmarked
-funds, it's been pretty bad for them and me.
+I did, however, participate in another decentralized organization after
+LeapDAO, notably with OceanDAO in 2021 through a grants funding mechanism based
+on token-voting. As their treasury was exclusively helt in their equity tokens,
+this meant I would get paid in OCEAN tokens the entire year.
+
+Today, although I appreciate them funding projects through equity, I'm glad I
+immediately covered all the project's expenses right then and there: With a
+fiat base line, around the 1 OCEAN/EUR mark. Had I helt or speculated with the
+funds, I would be burned badly today. With the downside being that this lead me
+to never truly have a say in the grants funding allocation process - although I
+think I had important things to say.
+
+But I think the gist of this renewed DAO participation is that it contradicted
+some of my thesis of remotely working in an internet organization. My prior
+thesis had originated from the idea of Holacracy being an appropriate
+corporation structure that helped people to self-express; but then suddenly
+here I was in a fairly vertically-integrated governance process that optimized
+for darwinistic principles of seed funding economies.
 
 So modern DAOs are not at all what I had in mind with my previous experience in
-LeapDAO. What I always had found fascinating about their Holacracy is that it
-fostered governance around creating policy-making to extend a mutually-agreed
-upon constitution.
+LeapDAO. What I always had found fascinating about their Holacracy
+implementation is that it fostered governance around creating policy-making to
+extend a mutually-agreed upon constitution.
 
 So our work there ended up being rather democratic - full of debates, tough and
 slow but equitable. I observed modern DAO governance conversely, with leaders
@@ -367,44 +376,52 @@ since then stopped. But I honestly find it overwhelming to parse the
 structurelessness and the noise. DAOs have lost me for now - until I see
 someone innovating on the above mentioned problems.
 
-### Stablecoins suck
+### The Future of Isolation is Work
 
-### The Future Of Work Is Flexible
-
-Whereas I thought that work would exclusively happen online - I now tend to
-believe that it'll evolve into a flexible model of being physically present and
-remote work. Having worked remotely for a couple of years now, with even
-renting a physical space as an air-gapped office from my personal space, while
-I think that Cal Newport's Deep Work is important for getting things done, one
-of the most deciding factors for success (trust) isn't built online.
+Whereas, pre-pandemic, I thought that work would exclusively happen online -
+having gone through lockdowns here in Berlin, I now realize that I
+underestimated the social function of physical presence. Having been almost
+exclusively remote for years now, even with renting a physical space office
+space myself, while I think that Cal Newport's Deep Work philsophy is
+important; one of the most deciding factors for being physically present is
+that trust isn't build well online.
 
 Additionally, and I'm also going to extrapolate this observation to everyone in
-my craft, isolation does improve intellectual output: But this voluntary
-self-ostracism has many other detrimental effects that creep into other aspects
-of life.
+my craft: While isolation does improve intellectual output, this voluntary
+self-ostracism has a great opportunity costs, potentially bigger than its
+promoted marginal output increase.
 
-Having the privilege to uninterruptedly working from my own office space has
-had the benefits of being able to concentrate well and achieve amazing
-intellectual feats. But doing this for an extended period of time also meant to
-me personally that I stopped being exposed to others - colleagues or friends of
-friends, and so I think for my future, I'll have to improve managing my work
-environment between seeking quiet spaces and exposing myself to distractive
-social situations. That's why I think flexible work - what Cal Newport calls a
-"Hub and Spokes model" is the future. Being able to focus, but also being able
-to mingle.
+Having had the privilege of uninterruptedly working from a personal office
+space for several years, I'm now of the opinion that seeking quiet spaces and
+exposing myself to more distractive but social situations is equivalent of a
+life lived meaningfully.
 
-#### Community Building Is More Important Than Ever
+The opportunity costs of an isolated work space are apparent once you try:
+unless you deliberately spend time at social functions, your social circle will
+shrink. For me an additional detriment was becoming more socially aversive.
+It's the effect I had initially observed with Mark Zuckerberg's digital comedy
+club.
 
-Keeping that insight in mind, it also yields an important aspect of future
-project building - namely focusing on establishing a shared identity being key.
+Noise-canceling airpods, one-click grocery apps, and texting instead of meeting
+face-to-face: While being extraordinarily conveninent, these
+anti-accelerationist technologies promote comfortable loneliness: The
+possibility of avoiding anxiety-inducing encounters with other human beings -
+at the cost of killing meaningful social interactions.
 
-With 45% of the population now being internet natives, finding belonging in
-what we believe it and who we feel being taken serious by is meaning. Those
-groups have long found their way from digital into the physical space.
+The future of work being flexible: That to me means carefully adopting the best
+part of both worlds: It means more office-live living spaces and more
+living-like office spaces - an "always-on" culture of acceptance.
 
-But remote work and the notion of sitting alone in quiet rooms for focus is a
-dynamic that will inevitably also give rise to everyone appreciating physical
-experiences. Or, anyways experiences that are meaningful.
+#### Communities are key
+
+But keeping that insight in mind, it also yields an important aspect of future
+project building - namely focusing on establishing a collective identity for
+networks.
+
+With 45% of the population now being internet natives, finding belonging within
+groups who's members share our believes and concerns is, for many, meaning.
+Those groups more traditionally organized throughout physical spaces have now
+arguably be ported into the digital realm - and they've also gone global.
 
 It's today entirely possible to work on projects without ever opening your
 mouth or showing your face - but it isn't possible to live such existence.
@@ -412,6 +429,8 @@ mouth or showing your face - but it isn't possible to live such existence.
 For me, and the projects that I want to invest it, this means that I'll keep an
 eye out for those that manage to create collective meaning for their community
 members. Those that make the network or the movement a central component.
+
+### Stablecoins suck
 
 ### Elon's Twitter is an attempt at staking
 
