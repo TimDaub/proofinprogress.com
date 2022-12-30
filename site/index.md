@@ -8,6 +8,7 @@ writing, talks and projects here. Take a look around :)
 
 # Writing
 
+- `2022-12-30`: [How did I become a productive writer?](posts/2022-12-30/How-did-I-become-a-productive-writer.html)
 - `2022-12-28`: [How I spent two months doing nothing](posts/2022-12-28/How-I-spent-two-months-doing-nothing.html)
 - `2022-11-29`: [Subtractive Problem Solving [Talk Transcript]](posts/2022-11-29/subtractive-problem-solving.html)
 - `2022-11-21`: [Why neume's only tightly-coupled dependency must be an L1 ⧉](https://neume.network/posts/why-neume-s-only-tightly-coupled-dependency-must-be-an-l1/)
