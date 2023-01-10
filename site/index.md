@@ -8,6 +8,7 @@ writing, talks and projects here. Take a look around :)
 
 # Writing
 
+- `2023-01-10`: [Why I don't believe in a multichain future](posts/2022-01-02/multichain-future.html)
 - `2022-12-30`: [How did I become a productive writer?](posts/2022-12-30/How-did-I-become-a-productive-writer.html)
 - `2022-12-28`: [How I spent two months doing nothing](posts/2022-12-28/How-I-spent-two-months-doing-nothing.html)
 - `2022-11-29`: [Subtractive Problem Solving [Talk Transcript]](posts/2022-11-29/subtractive-problem-solving.html)
