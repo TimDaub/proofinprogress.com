@@ -6,7 +6,11 @@ writing, talks and projects here. Take a look around :)
 - [`About`](about.html)
 - [`Projects`](projects.html)
 
-# Writing
+#### Want to follow me?
+
+Go here [`Subscribe`](subscribe.html).
+
+## Writing
 
 - `2023-01-10`: [Why I don't believe in a multichain future](posts/2022-01-02/multichain-future.html)
 - `2022-12-30`: [How did I become a productive writer?](posts/2022-12-30/How-did-I-become-a-productive-writer.html)
@@ -77,7 +81,7 @@ writing, talks and projects here. Take a look around :)
 - `2019-09-18`: [Planet A — "The Tragedy of the CO₂mmons" recap ⧉](https://www.dist0rtion.com/2019/09/18/planet-a-ccc-ethberlin-recap/)
 - `2019-02-28`: [Reasons to not ship a PoA network](posts/2019-02-28/poa.html)
 
-# Talks
+## Talks
 
 - `2022-11-29`: [Greenpill Podcast on Quadratic Voting, Harberger Taxes and Soulbound tokens](https://www.youtube.com/watch?v=-wQ8VgcoFsg)
 - `2022-11-15`: [PEEPanEIP #89: EIP-5192: Minimal Soulbound NFTs with Tim Daubenschütz ⧉](https://www.youtube.com/watch?v=unFTcUjQE3o)
