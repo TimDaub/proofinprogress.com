@@ -96,4 +96,4 @@ Go here [`Subscribe`](subscribe.html).
 
 --
 
-This site is hosted with nginx in a zero-carbon data center.
+This site is hosted with nginx in a zero-carbon data center. [Impressum](./impressum.html)
