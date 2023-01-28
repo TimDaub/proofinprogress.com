@@ -12,6 +12,7 @@ Go here [`Subscribe`](subscribe.html).
 
 ## Writing
 
+- `2023-01-28`: [The Red Wave That Killed The Ocean DAO](posts/2023-01-28/the-red-wave-that-killed-the-ocean-dao.html)
 - `2023-01-10`: [Why I don't believe in a multichain future](posts/2022-01-02/multichain-future.html)
 - `2022-12-30`: [How did I become a productive writer?](posts/2022-12-30/How-did-I-become-a-productive-writer.html)
 - `2022-12-28`: [How I spent two months doing nothing](posts/2022-12-28/How-I-spent-two-months-doing-nothing.html)
