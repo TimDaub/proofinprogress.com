@@ -3,6 +3,7 @@ import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { env, argv } from "process";
 import { parse, resolve } from "path";
 
+import { convert } from "html-to-text";
 import { encode } from "html-entities";
 import MarkdownIt from "markdown-it";
 import mk from "@iktakahiro/markdown-it-katex";
@@ -77,9 +78,9 @@ const doc = `
         : ""
     }
     <meta property="og:site_name" content="Proof In Progress">
-    <meta name="description" content="${encode(description)}">
+    <meta name="description" content="${encode(convert(description))}">
     <meta name="twitter:title" content="${fTitle}">
-    <meta name="twitter:description" content="${encode(description)}">
+    <meta name="twitter:description" content="${encode(convert(description))}">
     ${imgPath ? `<meta property="twitter:image" content="${imgPath}" />` : ""}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@timdaub">
