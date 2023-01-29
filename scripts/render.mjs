@@ -1,7 +1,7 @@
 // @format
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { env, argv } from "process";
-import { basename, parse, resolve } from "path";
+import { parse, resolve } from "path";
 
 import { encode } from "html-entities";
 import MarkdownIt from "markdown-it";
@@ -38,7 +38,11 @@ const imgMatcher = new RegExp('<img[^>]*src="([^"]+)"[^>]*>');
 const imgMatch = rendered.match(imgMatcher);
 let imgPath;
 if (imgMatch) {
-  imgPath = imgMatch[1];
+  try {
+    imgPath = new URL(imgMatch[1], url).href;
+  } catch (err) {
+    // We ignore cases where this won't work.
+  }
 }
 
 const matcher = new RegExp("(?:<p>)([\\s\\S]+?)(?:<\\/p>)");
