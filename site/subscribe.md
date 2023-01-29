@@ -4,6 +4,7 @@ There are three ways to subscribe to my writing:
 
 - Follow me on Twitter: [twitter.com/timdaub](https://twitter.com/timdaub)
 - Follow me on Farcaster: [farcaster://...](farcaster://profiles/5708)
+- RSS: `https://buttondown.email/timdaub/rss`
 - or subscribe to my newsletter below 👇
 
 ### Newsletter
