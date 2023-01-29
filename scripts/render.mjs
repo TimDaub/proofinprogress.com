@@ -1,7 +1,7 @@
 // @format
 import { mkdirSync, readFileSync, writeFileSync } from "fs";
 import { env, argv } from "process";
-import { parse, resolve } from "path";
+import { basename, parse, resolve } from "path";
 
 import { encode } from "html-entities";
 import MarkdownIt from "markdown-it";
@@ -20,6 +20,27 @@ const content = file.toString();
 const title = content.split("\n")[0];
 const fTitle = content.substring(2, title.length);
 const rendered = md.render(content);
+
+const metaMatcher = new RegExp(
+  "site\\/posts\\/(\\d{4}-\\d{2}-\\d{2})\\/([a-zA-Z-]*)\\.md"
+);
+const metaMatch = postPath.match(metaMatcher);
+let url;
+let date;
+if (metaMatch && metaMatch[1] && metaMatch[2]) {
+  const host = "https://proofinprogress.com";
+  const slug = metaMatch[2];
+  date = metaMatch[1];
+  url = `${host}/posts/${date}/${slug}.html`;
+}
+
+const imgMatcher = new RegExp('<img[^>]*src="([^"]+)"[^>]*>');
+const imgMatch = rendered.match(imgMatcher);
+let imgPath;
+if (imgMatch) {
+  imgPath = imgMatch[1];
+}
+
 const matcher = new RegExp("(?:<p>)([\\s\\S]+?)(?:<\\/p>)");
 const match = rendered.match(matcher);
 let description = "";
@@ -38,7 +59,26 @@ const doc = `
     <script defer data-domain="proofinprogress.com" src="https://plausible.io/js/script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8"/>
+    <meta property="og:title" content="${fTitle}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    ${url ? `<meta property="og:url" content="${url}" />` : ""}
+    ${imgPath ? `<meta property="og:image" content="${imgPath}" />` : ""}
+    <meta property="article:author" content="Tim Daubenschütz">
+    ${
+      date
+        ? `<meta property="article:published_time" content="${new Date(
+            date
+          ).toISOString()}">`
+        : ""
+    }
+    <meta property="og:site_name" content="Proof In Progress">
     <meta name="description" content="${encode(description)}">
+    <meta name="twitter:title" content="${fTitle}">
+    <meta name="twitter:description" content="${encode(description)}">
+    ${imgPath ? `<meta property="twitter:image" content="${imgPath}" />` : ""}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@timdaub">
     <title>${fTitle}</title>
 
     <link rel="stylesheet" href="/katex.min.css">
