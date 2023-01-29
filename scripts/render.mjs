@@ -82,7 +82,7 @@ const doc = `
     <meta name="twitter:title" content="${fTitle}">
     <meta name="twitter:description" content="${encode(convert(description))}">
     ${imgPath ? `<meta property="twitter:image" content="${imgPath}" />` : ""}
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@timdaub">
     <title>${fTitle}</title>
 
