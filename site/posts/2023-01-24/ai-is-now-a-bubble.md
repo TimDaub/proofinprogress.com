@@ -1,4 +1,4 @@
-# The LLM Bubble Is Boiling Our Oceans
+# AI is now a Bubble
 
 With this article, I want to outline my current thinking around large language
 models like OpenAI's chatGPT. As many smart people have made claims in public
