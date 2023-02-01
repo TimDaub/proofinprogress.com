@@ -266,3 +266,7 @@ form their opinion.
   considered the "new oil" for a while now. So even if training gets
   computationally cheaper, the aquisition of the exclusive rights to a data set
   are going to rise.
+
+---
+
+published on 2023-02-01 by timdaub

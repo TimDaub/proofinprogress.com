@@ -12,7 +12,7 @@ Go here [`Subscribe`](subscribe.html).
 
 ## Writing
 
-- `2023-01-xx`: [The AI Crowd is Mad](posts/2023-01-24/the-ai-crowd-is-mad.html)
+- `2023-02-01`: [The AI Crowd is Mad](posts/2023-02-01/the-ai-crowd-is-mad.html)
 - `2023-01-28`: [The Red Whale that Killed the Ocean DAO](posts/2023-01-28/the-red-whale-that-killed-the-ocean-dao.html)
 - `2023-01-10`: [Why I don't believe in a multichain future](posts/2022-01-02/multichain-future.html)
 - `2022-12-30`: [How did I become a productive writer?](posts/2022-12-30/How-did-I-become-a-productive-writer.html)
