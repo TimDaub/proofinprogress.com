@@ -26,7 +26,7 @@ the world would like to see is increased risk-taking in the workplace.">
     <title>The terrible things I'd do with your money</title>
 
     <link rel="stylesheet" href="/katex.min.css">
-    
+    <script src="http://localhost:8888"></script>
     <style>
       html {
         background-color: #FAF9F6;
@@ -37,6 +37,23 @@ the world would like to see is increased risk-taking in the workplace.">
         font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
         font-family: system-ui;
         color: #444;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      tr:nth-child(even), th {
+        background: #F0F0F0;
+      }
+
+      table td, table th {
+        padding: .325em;
+        text-align: center;
       }
 
       body :not(:is(h1,h2,h3,h4,h5,h6)) {

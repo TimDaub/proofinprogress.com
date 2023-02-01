@@ -100,6 +100,23 @@ const doc = `
         color: #444;
       }
 
+      table {
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      tr:nth-child(even), th {
+        background: #F0F0F0;
+      }
+
+      table td, table th {
+        padding: .325em;
+        text-align: center;
+      }
+
       body :not(:is(h1,h2,h3,h4,h5,h6)) {
         line-height: 1.5;
       }
