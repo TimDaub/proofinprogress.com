@@ -12,6 +12,7 @@ Go here [`Subscribe`](subscribe.html).
 
 ## Writing
 
+- `2023-04-07`: [Doomerism Marketing is dangerous too!](posts/2023-04-08/doomerism-marketing-is-dangerous-too.html)
 - `2023-02-01`: [The AI Crowd is Mad](posts/2023-02-01/the-ai-crowd-is-mad.html)
 - `2023-01-28`: [The Red Whale that Killed the Ocean DAO](posts/2023-01-28/the-red-whale-that-killed-the-ocean-dao.html)
 - `2023-01-10`: [Why I don't believe in a multichain future](posts/2022-01-02/multichain-future.html)
