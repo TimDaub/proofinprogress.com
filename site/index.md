@@ -12,6 +12,7 @@ Go here [`Subscribe`](subscribe.html).
 
 ## Writing
 
+- `2023-04-18`: [My deleted response to Pirate Wire's "Nuclear Disasters"](posts/2023-04-18/my-response-to-pirate-wires-nuclear-disasters.html)
 - `2023-04-07`: [Doomerism Marketing is dangerous too!](posts/2023-04-08/doomerism-marketing-is-dangerous-too.html)
 - `2023-02-01`: [The AI Crowd is Mad](posts/2023-02-01/the-ai-crowd-is-mad.html)
 - `2023-01-28`: [The Red Whale that Killed the Ocean DAO](posts/2023-01-28/the-red-whale-that-killed-the-ocean-dao.html)
