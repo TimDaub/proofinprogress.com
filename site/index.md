@@ -12,6 +12,7 @@ Go here [`Subscribe`](subscribe.html).
 
 ## Writing
 
+- `2023-04-28`: [Traveled to Milan and now ChatGPT isn't working](posts/2023-04-28/traveled-to-milan-and-now-chatgpt-is-not-working.html)
 - `2023-04-18`: [My deleted response to Pirate Wire's "Nuclear Disasters"](posts/2023-04-18/my-response-to-pirate-wires-nuclear-disasters.html)
 - `2023-04-07`: [Doomerism Marketing is dangerous too!](posts/2023-04-08/doomerism-marketing-is-dangerous-too.html)
 - `2023-02-01`: [The AI Crowd is Mad](posts/2023-02-01/the-ai-crowd-is-mad.html)
