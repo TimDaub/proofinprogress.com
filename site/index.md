@@ -12,7 +12,9 @@ Go here [`Subscribe`](subscribe.html).
 
 ## Writing
 
-- `2023-04-28`: [Traveled to Milan and now ChatGPT isn't working](posts/2023-04-28/traveled-to-milan-and-now-chatgpt-is-not-working.html)
+🔊 means an audio version is available
+
+- `2023-04-28`: 🔊 [Traveled to Milan and now ChatGPT isn't working](posts/2023-04-28/traveled-to-milan-and-now-chatgpt-is-not-working.html)
 - `2023-04-18`: [My deleted response to Pirate Wire's "Nuclear Disasters"](posts/2023-04-18/my-response-to-pirate-wires-nuclear-disasters.html)
 - `2023-04-07`: [Doomerism Marketing is dangerous too!](posts/2023-04-08/doomerism-marketing-is-dangerous-too.html)
 - `2023-02-01`: [The AI Crowd is Mad](posts/2023-02-01/the-ai-crowd-is-mad.html)
@@ -43,8 +45,8 @@ Go here [`Subscribe`](subscribe.html).
 - `2022-04-08`: [The JPG newsletter with my friend Tim as special guest: on Ascribe, jpegs, quadratic voting, and non-transferrable non-fungible tokens ⧉](https://jpg100.substack.com/p/the-jpg-newsletter-with-my-friend)
 - `2022-03-28`: [Harberger Taxes can be Crypto's Sustainable Business Model](posts/2022-03-28/harberger-tax-can-cryptos-sustainable-business-model.html)
 - `2022-03-27`: [The User Experience Problems Of Quadratic Voting](posts/2022-03-27/the-user-experience-problems-of-quadratic-voting.html)
-- `2022-03-11`: [Ethereum Is The Newsfeed We Deserve](posts/2022-03-11/ethereum-is-the-newsfeed-we-deserve.html)
-- `2022-02-28`: [Smart Contracts are the Programmable Commons](posts/2022-02-28/smart-contracts-are-programmable-commons.html)
+- `2022-03-11`: 🔊 [Ethereum Is The Newsfeed We Deserve](posts/2022-03-11/ethereum-is-the-newsfeed-we-deserve.html)
+- `2022-02-28`: 🔊 [Smart Contracts are the Programmable Commons](posts/2022-02-28/smart-contracts-are-programmable-commons.html)
 - `2022-02-19`: [Non-Skeuomorphic Harberger Properties may not be implementable as ERC721 NFTs](posts/2022-02-19/non-skeuomorphic-harberger-properties-erc721-nfts.html)
 - `2022-02-17`: [What happened at Gitcoin's Schelling Point event?](posts/2022-02-17/gitcoin-schelling-point-ethdenver.html)
 - `2022-02-16`: [My First Day at BUIDLWEEK & ETHDENVER](posts/2022-02-16/ethdenver-buidl-week-day-one.html)
@@ -76,7 +78,7 @@ Go here [`Subscribe`](subscribe.html).
 - `2020-12-27`: [WASM-STREAM, a virtual stage for digital artists](posts/2020-12-27/wasm-stream.html)
 - `2020-12-11`: [Meet rugpullindex.com, an index fund for data sets](posts/2020-12-11/rugpullindex.html)
 - `2020-12-03`: [I got 99 problems but `SameSite` cookies ain't one](posts/2020-12-03/samesite.html)
-- `2020-09-08`: [web3 is a stupid idea (🔊)](posts/2020-09-08/web3.html)
+- `2020-09-08`: 🔊 [web3 is a stupid idea](posts/2020-09-08/web3.html)
 - `2020-09-01`: [TypeScript is weakening the JavaScript ecosystem](posts/2020-09-01/typescript.html)
 - `2020-05-02`: [Eventual Consistency and Jazz](posts/2020-05-02/jazz.html)
 - `2020-04-18`: [On Imaginary Monies](posts/2020-04-18/imaginary.html)

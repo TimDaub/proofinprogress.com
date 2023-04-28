@@ -1,5 +1,7 @@
 # Smart Contracts are the Programmable Commons
 
+[[Listen to the audio version on Youtube](https://youtu.be/-xreeHzlpYE)]
+
 Ethereum's smart contracts allow developers, for the first time in history, to
 build ownership experiences residing in the commons. Traditional cloud
 platforms like Amazon's AWS or Microsoft's Azure are built on the assumption of

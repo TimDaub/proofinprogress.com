@@ -1,5 +1,7 @@
 # Ethereum Is The Newsfeed We Deserve
 
+[[Listen to the audio version on YouTube](https://youtu.be/SceLAIn5Y18)]
+
 Ethereum is a better publishing platform than any of its web2 counterparts.
 Like Facebook or Twitter.
 

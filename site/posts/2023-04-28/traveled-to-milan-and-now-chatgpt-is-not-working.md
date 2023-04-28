@@ -1,5 +1,8 @@
 # Traveled to Milan and now ChatGPT isn't working
 
+
+[[Listen to the audio version on Youtube](https://www.youtube.com/watch?v=D1IuYsmeAos)]
+
 If you're expecting the regularly scheduled program, this post isn't that.
 Instead, it's primarily a message to those people in Brussels that create the
 EU regulation. As a citizen, I feel like now is an appropriate moment to speak
