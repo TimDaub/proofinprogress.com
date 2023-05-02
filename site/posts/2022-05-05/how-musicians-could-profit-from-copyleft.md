@@ -1,5 +1,7 @@
 # How Musicians Could Profit From Copyleft
 
+[[Listen to audio version on YouTube](https://www.youtube.com/watch?v=YeigDIJqm24)]
+
 Few people intuitively understand Copyleft. Especially in all peripheral parts
 of the software development industry, people are (painfully) unaware, but more
 importantly, I seldom see someone showing a deep understanding of Copyleft.

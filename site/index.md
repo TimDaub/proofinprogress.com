@@ -40,7 +40,7 @@ Go here [`Subscribe`](subscribe.html).
 - `2022-06-14`: [Unsolved Problems In The Neume Network ⧉](https://neume.network/posts/unsolved-problems-in-the-neume-network/)
 - `2022-05-30`: [What are Account-bound tokens?](posts/2022-05-30/what-are-account-bound-tokens.html)
 - `2022-05-27`: [Ceci n'est pas une non fungible token](posts/2022-05-27/ceci-n-est-pas-une-non-fungible-token.html)
-- `2022-05-05`: [How Musicians Could Profit From Copyleft](posts/2022-05-05/how-musicians-could-profit-from-copyleft.html)
+- `2022-05-05`: 🔊 [How Musicians Could Profit From Copyleft](posts/2022-05-05/how-musicians-could-profit-from-copyleft.html)
 - `2022-04-15`: [The terrible things I'd do with your money](posts/2022-04-15/the-terrible-things-I-would-do-with-your-money.html)
 - `2022-04-08`: [The JPG newsletter with my friend Tim as special guest: on Ascribe, jpegs, quadratic voting, and non-transferrable non-fungible tokens ⧉](https://jpg100.substack.com/p/the-jpg-newsletter-with-my-friend)
 - `2022-03-28`: [Harberger Taxes can be Crypto's Sustainable Business Model](posts/2022-03-28/harberger-tax-can-cryptos-sustainable-business-model.html)
