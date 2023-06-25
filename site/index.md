@@ -14,6 +14,7 @@ Go here [`Subscribe`](subscribe.html).
 
 🔊 means an audio version is available
 
+- `2023-06-26`: [The Kiwi News badge is a weird mix of an NFT and a Soulbound token](posts/2023-06-26/the-kiwi-news-badge-is-a-weird-mix-of-an-nft-and-a-soulbound-token.html)
 - `2023-04-28`: 🔊 [Traveled to Milan and now ChatGPT isn't working](posts/2023-04-28/traveled-to-milan-and-now-chatgpt-is-not-working.html)
 - `2023-04-18`: [My deleted response to Pirate Wire's "Nuclear Disasters"](posts/2023-04-18/my-response-to-pirate-wires-nuclear-disasters.html)
 - `2023-04-07`: [Doomerism Marketing is dangerous too!](posts/2023-04-08/doomerism-marketing-is-dangerous-too.html)

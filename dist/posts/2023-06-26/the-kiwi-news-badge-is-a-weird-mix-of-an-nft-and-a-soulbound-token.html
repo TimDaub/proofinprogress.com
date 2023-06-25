@@ -1,0 +1,168 @@
+
+<!doctype html>
+<html>
+  <head>
+    <script defer data-domain="proofinprogress.com" src="https://plausible.io/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta property="og:title" content="The Kiwi News badge is a weird mix of an NFT and a Soulbound token" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://proofinprogress.com/posts/2023-06-26/the-kiwi-news-badge-is-a-weird-mix-of-an-nft-and-a-soulbound-token.html" />
+    
+    <meta property="article:author" content="Tim Daubenschütz">
+    <meta property="article:published_time" content="2023-06-26T00:00:00.000Z">
+    <meta property="og:site_name" content="Proof In Progress">
+    <meta name="description" content="Before all the fun around the Kiwi meme on Farcaster and deciding to use it as a
+brand name for Kiwi News, I had worked as a freelancer for clients and, in my
+free time, on Soulbound token specifications for the Ethereum Magicians. I did
+that until when a client contacted me wanting to adopt my specification around
+ERC-4973 &quot;Account-bound tokens,&quot; and so I consulted with them for a while and
+speed-ran also another standard document in that period, called ERC-5192
+&quot;Minimal Soulbound tokens.&quot;">
+    <meta name="twitter:title" content="The Kiwi News badge is a weird mix of an NFT and a Soulbound token">
+    <meta name="twitter:description" content="Before all the fun around the Kiwi meme on Farcaster and deciding to use it as a
+brand name for Kiwi News, I had worked as a freelancer for clients and, in my
+free time, on Soulbound token specifications for the Ethereum Magicians. I did
+that until when a client contacted me wanting to adopt my specification around
+ERC-4973 &quot;Account-bound tokens,&quot; and so I consulted with them for a while and
+speed-ran also another standard document in that period, called ERC-5192
+&quot;Minimal Soulbound tokens.&quot;">
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@timdaub">
+    <title>The Kiwi News badge is a weird mix of an NFT and a Soulbound token</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    
+    <style>
+      html {
+        background-color: #FAF9F6;
+        overflow-wrap: break-word;
+        max-width: 70ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      tr:nth-child(even), th {
+        background: #F0F0F0;
+      }
+
+      table td, table th {
+        padding: .325em;
+        text-align: center;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.5;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>The Kiwi News badge is a weird mix of an NFT and a Soulbound token</h1>
+<p>Before all the fun around the Kiwi meme on Farcaster and deciding to use it as
+a brand name for Kiwi News, I had worked as a freelancer for clients and, in my
+free time, on Soulbound token specifications for the Ethereum Magicians. I did
+that until when a client contacted me wanting to adopt my specification around
+ERC-4973 &quot;Account-bound tokens,&quot; and so I consulted with them for a while and
+speed-ran also another standard document in that period, called ERC-5192
+&quot;Minimal Soulbound tokens.&quot;</p>
+<p>Original, with respect to all my prior work problems, by speccing out the
+Soulbound tokens docs, an issue that always seemed to resurface was Twitter
+calling out the ill-intended purpose of the token design by, for example,
+comparing it to Herpes, as you also can't get rid of it. The fundamental design
+flaw those critics pointed out in the specs was that these tokens could no
+longer move addresses through transfers once sent to their minter. I had
+purposefully called them &quot;account-bound,&quot; as that was what they were, bound to
+an EOA account.</p>
+<p>And while many criticisms were valid, they focused on addressable flaws that we
+had managed to fix already in the first iterations. But that didn't matter as
+people had made up their minds about Soulbound tokens - and that since they
+were considered evil, the Ethereum community must not have them.</p>
+<p>Feeling quite discouraged and misunderstood, I quietly quit my voluntary work
+on ERCs in the Magicians forum and looked for diasporas not overcrowded with
+newly minted privacy hall monitors. Coincidentally, I found Farcaster, joined
+it, and suddenly had a community of fun people surrounding me, with none of
+them having a main character aura surrounding them.</p>
+<p>This was at the time of FTX's collapse and when I started thinking that we, the
+old guard, were now asked to report for duty by stepping into the limelight and
+mending the now-expanded space's issues. Driven by that, I wanted to be more
+serious about founding a project and taking it all the way. In the following
+months, I went to the US to participate in an accelerator, and I built the Kiwi
+News peer-to-peer network protocol that I then shipped two months ago.</p>
+<p>But Kiwi News's badge, which lets you upvote and submit links - a kind of gas
+mechanism to bribe node operators to store your data - is really a mixture of
+an NFT and a Soulbound token. While it works onchain just like any other NFT,
+meaning you could sell it on OpenSea or send it to a new address, it also has
+the above-mentioned gas-mechanism functionality which allows users to upvote
+and submit new links: but only for signatures of the NFT's minter addresses!</p>
+<p>If you buy one of our NFTs on Zora today and submit a new link to Kiwi signed
+by that address, everything works as expected. However, if you transferred the
+NFT to another address and upvoted a link from there, the peer-to-peer nodes
+wouldn't accept it. They've made it their consensus, at least for now, to only
+store the data of those addresses who originally <em>minted</em> the NFT - and that
+hence excludes any secondary addresses who just received it by transfer.</p>
+<p>I wanted to tell this story because it seems essential to me. I sank a lot of
+private time into the SBT specs - for which I, fortunately, was also
+compensated in Optimism's latest RAPGF round. Still, I felt misunderstood by
+some of the community, painting a picture of us wanting to reign in a
+privacy-nightmare dystopia. By introducing the above-mentioned primitive, I
+find myself redeemed from the criticism. I'm excited about what the future will
+bring for Kiwi News, and I hope to contribute more to a token stack that makes
+it more costly to defect.</p>
+<hr>
+<p>published 2023-06-26 by timdaub</p>
+
+  </body>
+</html>
+
