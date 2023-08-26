@@ -90,12 +90,12 @@ const doc = `
     ${liveReloadInclude}
     <style>
       html {
-        background-color: #FAF9F6;
+        background-color: #FFFbF1;
         overflow-wrap: break-word;
-        max-width: 70ch;
+        max-width: 60ch;
         padding: calc(1vmin + .5rem);
         margin-inline: auto;
-        font-size: clamp(1em, 0.909em + 0.45vmin, 1.25em);
+        font-size: clamp(1.2em, 1em + 0.5vmin, 1.5em);
         font-family: system-ui;
         color: #444;
       }
@@ -118,7 +118,7 @@ const doc = `
       }
 
       body :not(:is(h1,h2,h3,h4,h5,h6)) {
-        line-height: 1.5;
+        line-height: 1.4;
       }
 
       blockquote {
@@ -128,6 +128,7 @@ const doc = `
       p {
         text-align: justify;
         hyphens: auto;
+        word-spacing: -1px;
       }
 
       img {
