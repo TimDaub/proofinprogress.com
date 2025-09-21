@@ -14,6 +14,7 @@ Go here [`Subscribe`](subscribe.html).
 
 🔊 means an audio version is available
 
+- `2025-09-20`: [The Biggest Coding Mistakes I Made Building Kiwi News](posts/2025-09-20/biggest-coding-mistakes-I-made-building-kiwi-news.html)
 - `2025-09-14`: [How I made cycling fun again](posts/2025-09-14/how-i-made-cycling-fun-again.html)
 - `2023-08-26`: [The Wallet-Dapp Dilemma](posts/2023-08-26/the-wallet-dapp-dilemma.html)
 - `2023-06-26`: [The Kiwi News badge is a weird mix of an NFT and a Soulbound token](posts/2023-06-26/the-kiwi-news-badge-is-a-weird-mix-of-an-nft-and-a-soulbound-token.html)

@@ -1,0 +1,265 @@
+
+<!doctype html>
+<html>
+  <head>
+    <script defer data-domain="proofinprogress.com" src="https://plausible.io/js/script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8"/>
+    <meta property="og:title" content="The Biggest Coding Mistakes I Made Building Kiwi News" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://proofinprogress.com/posts/2025-09-20/biggest-coding-mistakes-I-made-building-kiwi-news.html" />
+    
+    <meta property="article:author" content="Tim Daubenschütz">
+    <meta property="article:published_time" content="2025-09-20T00:00:00.000Z">
+    <meta property="og:site_name" content="Proof In Progress">
+    <meta name="description" content="Kiwi News is my 2.5 year old startup project. I blog about its bootstrapping
+over at Bootstrapping Kiwi [https://bootstrappingkiwi.substack.com/]. Kiwi is
+supposed to be an Ethereum-based Hacker News clone that cannot be taken hostage
+by its operator as all user data is constantly copyable by a network of peer to
+peer nodes.">
+    <meta name="twitter:title" content="The Biggest Coding Mistakes I Made Building Kiwi News">
+    <meta name="twitter:description" content="Kiwi News is my 2.5 year old startup project. I blog about its bootstrapping
+over at Bootstrapping Kiwi [https://bootstrappingkiwi.substack.com/]. Kiwi is
+supposed to be an Ethereum-based Hacker News clone that cannot be taken hostage
+by its operator as all user data is constantly copyable by a network of peer to
+peer nodes.">
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@timdaub">
+    <title>The Biggest Coding Mistakes I Made Building Kiwi News</title>
+
+    <link rel="stylesheet" href="/katex.min.css">
+    
+    <style>
+      html {
+        background-color: #FFFbF1;
+        overflow-wrap: break-word;
+        max-width: 60ch;
+        padding: calc(1vmin + .5rem);
+        margin-inline: auto;
+        font-size: clamp(1.2em, 1em + 0.5vmin, 1.5em);
+        font-family: system-ui;
+        color: #444;
+      }
+
+      table {
+        border-collapse: collapse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+      }
+
+      tr:nth-child(even), th {
+        background: #F0F0F0;
+      }
+
+      table td, table th {
+        padding: .325em;
+        text-align: center;
+      }
+
+      body :not(:is(h1,h2,h3,h4,h5,h6)) {
+        line-height: 1.4;
+      }
+
+      blockquote {
+        font-style: italic;
+      }
+
+      p {
+        text-align: justify;
+        hyphens: auto;
+        word-spacing: -1px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      strong {
+        color: #222;
+      }
+
+      ul {
+        list-style-type: square;
+      }
+
+      ul, ol {
+        padding-left: 30px;
+      }
+
+      pre {
+        overflow: auto;
+        background-color: rgba(0,0,0,0.01);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://proofinprogress.com">proofinprogress.com</a>
+		<br>
+    <hr>
+    <h1>The Biggest Coding Mistakes I Made Building Kiwi News</h1>
+<p>Kiwi News is my 2.5 year old startup project. I blog about its bootstrapping
+over at <a href="https://bootstrappingkiwi.substack.com/">Bootstrapping Kiwi</a>. Kiwi is
+supposed to be an Ethereum-based Hacker News clone that cannot be taken hostage
+by its operator as all user data is constantly copyable by a network of peer to
+peer nodes.</p>
+<p>Controversially, it is a <a href="https://github.com/attestate/kiwistand">code base</a>
+entirely written in vanilla JavaScript. By many criticized as a bad choice in
+this day and age.</p>
+<p>I started the project right around the time when ChatGPT was released, and
+among my peers I was one of the few people who vibe coded from the get go. I'd
+paste whole files in the ChatGPT interface and have it generate code for me
+that I'd then copy back into vim.</p>
+<p>Later, when better tooling became available, I switched to
+<a href="https://github.com/kharvd/gpt-cli">gpt-cli</a> before becoming aider and Claude
+Code pilled.</p>
+<p>The part of KN that's entirely handwritten is the p2p consensus
+algorithm. Its tests as well as the entire implementation was painstakenly
+written during an incubator phase in the US where I figured out how to
+build a set reconciliation algorithm using the libp2p library.</p>
+<p>The idea to write a blog post talking about the biggest mistakes I made with
+Kiwi News came to me during bed time. &quot;This would click really well with some
+of my more technical followers&quot;, I thought. That is as I have had countless
+arguments already about the code base and how I ought to change it.</p>
+<p>So in the following, I'll talk about my biggest regrets.</p>
+<h2>Mistake #1: Build on top of Ethereum.</h2>
+<p>Throughout most of the project's existence I've been a diehard fan of Ethereum.
+I liked the project for its simplicity and elegance and for its visionary
+idealism around improving a complex system like finance for the better.</p>
+<p>Ethereum's price rise in 2021 made me a lot of money and I somehow started to
+feel indebted to its community. I built Kiwi News with a sense of optimism in
+Ethereum's expansive capability. I basically used all the money given to me in
+Ethereum's price rise to build Kiwi News. With Ethereum's core layer becoming
+more and more corrupted, I felt that contributing to Ethereum by strengthening
+its social layer through Kiwi, I'd do a good deed to improve the project's
+longevity.</p>
+<p>And indeed, in the first years Ethereum also provided for me and my cofounder.
+We'd get public goods funding for our work and this helped us build without
+having to focus on getting a real job.</p>
+<p>In the beginning, I built Kiwi News being convinced that if the project would
+pass the Ethereum maximalists's purity tests then this would be my entry ticket
+into the upper echelons of its community. I also thought that this would be a
+brilliant go-to-market strategy and that Ethereum maximalists would be easily
+pursuated to switching from X and other platforms to Kiwi News, given that its
+guarantees and economics were much more meaningfully than the big tech
+alternatives.</p>
+<p>However, none of this did ever happen. I credit a couple of reasons for why I
+think catering to these people proved very difficult for Kiwi News:</p>
+<ol>
+<li>The purity test is dynamic and continuously increasing. The purity has to be
+proven repeatedly and over time. The factors of the purity test are changing
+and so as soon as you sail out with a project trying to capture new
+territory, some of the elite's goals might shift during your journey, making
+it extremely difficult to keep catering to them.</li>
+<li>The &quot;number go up&quot; goal is more important than anything else. With Kiwi
+News, for example, we'd frequently get discriminated against as we take
+transaction volume off chains and into our own network. This is seen as
+detrimental to furthering the Ethereum ecosystem's goal as the network's
+stop loss is how much money can be made from rent seeking in the consensus
+algorithm.</li>
+<li>The Ethereum community is too immature with regards to caring for consumers.
+In fact, I also think this has a political dimension where someone in the
+Ethereum community might even entirely reject the idea of &quot;consumption,&quot; and
+therefore will also reject simplifying applications to cater to really dumb
+user behavior.</li>
+<li>There is no prestige for building visually beautiful things. Ethereum
+maximalists do value beautifully designed things like developer interfaces
+and beautifully written code. But they do not seem to have a sensor for
+recognizing really beautifully visually designed UIs and applications. Or,
+in any event, that sensor is much less developed than other sensors. Heros
+in the Ethereum community are consensus researchers and DeFi hackers.
+Consumer application developers aren't celebrated or made famous. They're a
+risk factor to incumbents' power.</li>
+<li>The L2 roadmap is just bad. Everyone knows it and talks about it offline.
+But admitting it is like failing one of the above mentioned purity tests.
+Admit it and your project will stop receive attention or funding. Not a good
+environment to build the best possible system.</li>
+</ol>
+<p>Now, the above can be interpreted as if I'd try to blame the Ethereum community
+for my own failure to build a good product, which is not my intention at all!</p>
+<p>I want to continue building Kiwi News and so in general I don't failing to
+attract the Ethereum community as a proxy for failing to build Kiwi News
+entirely.</p>
+<p>I do, however, want to stress that I think it was a major mistake to build
+foundational parts of the Kiwi News architecture on Ethereum. I would have
+wished that the Ethereum community would have grown by now much more aware of
+its UX failings. I expected that we'd now have flawless UX, beautiful and
+fully-working wallets and that we'd have a much more diverse set of
+applications other than the handful of DeFi that has proven to work.</p>
+<p>My pragmatic advice for someone who still wants to cater to the Ethereum
+community would be that if you think you've been an integral part of the
+Ethereum community already and that you feel very much like them, then I think
+you'll have a good shot at succeeding at building a product for them.</p>
+<p>If you, however, ever so slightly feel like not belonging, I'd strongly suggest
+to not even try, unless you want to spend years as the outcast screaming
+towards the core.</p>
+<h2>Mistake #2: Chosing the wrong templating language and frontend stack.</h2>
+<p>The Kiwi News frontend has a server-side rendering part which is implemented
+using <a href="https://github.com/developit/htm">developit/htm</a>. To enable dynamic
+functionality of UI components after the page has loaded we insert React into
+&quot;islands&quot; of the website. This means we'll insert a React root, for example,
+into a specific button on the page to make it load or send information
+dynamically.</p>
+<p>This turns out to produce a lot of boilerplate. It also makes maintenance of
+styles quite cumbersome.</p>
+<p>As a decade-long-experienced frontend developer, I should have known better.
+But at the time, I had felt so depressed by the frontend ecosystem that I
+decided to go frontend-framework-less entirely.</p>
+<p>Think about it this way: If you need a client-side JavaScript button on the
+website then you'll have to build that button's styling on the server in
+an entirely separate file. And then you'll have to name that button e.g. with
+an ID or a class. The client-side JavaScript will then seek out this button
+with a query selector to replace it with a React root that enables the
+client-side JS functionality.</p>
+<p>Surprisingly, this works really well and it's also super simple. But it is also
+a real pain if you want to avoid layout shifts.</p>
+<p>I decided for this approach as it is a principle I started living by during
+coding, which is that I prefer explicit and visible code over abstracted-away
+framework magic. A apparent benefit of this approach is that you can literally
+just trace through the code base and find how everything works. It'really plain
+and stupid and this is why I favored that approach over a more complex one.
+That said, it is starting to become a bit overwhelming after 2.5 years.</p>
+<h2>Mistake #3: Building a website, not an app.</h2>
+<p>While being a major regret, I think this one has been a life lesson I managed
+to cope well with.</p>
+<p>I started my career as a web developer as this was always more accessible to me
+even before I started computer science. I didn't even consider building an app
+for Kiwi News in the first place. In fact, I loved the idea of an open web so
+much and where anything is accessible using links that I really built the
+entire project around that: link sharing.</p>
+<p>But building the product as a website and as part of the web not only
+preselects a style of solutions, it also brands the product differently. The
+truth is that consumers socially value websites as much less desirable than
+apps in my experience. It's not something you'll hear them say outloud. But
+it's certainly a perception that many have.</p>
+<p>Seeking advice from designers, I'd hear them say that I should try to become
+more like an app and I'd counter &quot;but we are an app!&quot; pointing to the PWA icon
+on my phone. But consumers' mental model of an app is far different from the
+distinct lines we software developers draw.</p>
+<p>If I could, I'd probably really start building Kiwi News first and foremost as
+an app. I'd then invent the tech to make the app work.</p>
+<h2>Conclusion</h2>
+<p>I don't expect there to be any common wisdom to be drawn and synthesized from
+these three mistakes. I didn't write the article to arrive at that conclusion
+either.</p>
+<p>I guess I hope that by writing and publishing this, however, I gain the
+confidence and the inspiration to move on from these regrets in some way.</p>
+<p>For what concerns the Ethereum community, I'm not proud of what I say about
+them, but I feel like it is a necessity for better story telling and to share
+what I truly think deep down that makes me publish this. I do think they're an
+annoying cult and I wish I could just exit their sphere of influence.</p>
+<hr>
+<p>Published by timdaub on 2025-09-20</p>
+
+  </body>
+</html>
+
